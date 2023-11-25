@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Cliente tcc",
   "main": "app.js",
+  "engines": {
+    "node": "18"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "start": "node app.js"
   },
   "author": "Felipe Diniz dos Santos",
   "license": "ISC",
