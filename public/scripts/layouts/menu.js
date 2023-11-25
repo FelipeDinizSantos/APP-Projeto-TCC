@@ -121,10 +121,10 @@ burgerButton.addEventListener('click', () => {
 
     if(burgerButton.classList.contains('open'))
     {
-        burgerButton.src = '/assets/burger_close.svg';
+        burgerButton.src = '/assets/burger_open.svg';
     }
     else
     {
-        burgerButton.src = '/assets/burger_open.svg';
+        burgerButton.src = '/assets/burger_close.svg';
     }
 });
