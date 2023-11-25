@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <% styleLinks.forEach(styleLink => {%>
+        <link rel="stylesheet" href="<%= styleLink %>">
+    <%})%>
+    <% scriptsLinks.forEach(scriptLink => {%>
+        <script src="<%= scriptLink %>" defer></script>
+    <%})%>
+    <script src="/scripts/layouts/menu.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/layouts/header.css">
+    <link rel="stylesheet" href="/stylesheets/layouts/cleanStyle.css">
+</head>
+<body>
+    <header>
+        <img src="/assets/burger_open.svg" class="burgerButton open">
+        <ul class="menuOptions">
+            <li class="home">
+                <img src="/assets/homeGray.png" alt="home">
+                <p>Home</p>
+            </li>
+            <li class="notification">
+                <img src="/assets/notificationGray.png" alt="notification">
+                <p>Notificação</p>
+            </li>
+            <li class="community">
+                <img src="/assets/communityGray.png" alt="community">
+                <p>Comunidade</p>
+            </li>
+            <li class="aboutUs">
+                <img src="/assets/aboutUsGray.png" alt="aboutUs">
+                <p>Sobre nós</p>
+            </li>
+            <li class="support">
+                <img src="/assets/supportGray.png" alt="support">
+                <p>Suporte</p>
+            </li>
+            <li class="settings">
+                <img src="/assets/settingGray.png" alt="settings">
+                <p>Configuração</p>
+            </li>
+            <li class="theme">
+                <img src="/assets/themeGray.png" alt="theme">
+                <p>Tema</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </li>
+            <li class="userOption">
+                <img src="/assets/logoutGray.png" alt="userOption">
+                <p>Logout</p>
+            </li>
+        </ul>
+    </header>

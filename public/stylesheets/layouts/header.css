@@ -1,0 +1,225 @@
+header
+{
+    background-color: white;
+    position: relative;
+    height: 100vh;
+    width: 0;
+    transition: all .2s ease-out;
+}
+
+header img.burgerButton
+{
+    width: 5vw;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+header img.burgerButton.open
+{
+    transition: all .5s ease-in-out;
+}
+
+header img.burgerButton.close
+{
+    position: absolute;
+    right: 0;
+    transition: all .5s ease-in-out;
+}
+
+header ul
+{
+    display: none;
+    margin-top: 16vh;
+    flex-direction: column;
+    padding: 0 1em;
+    gap: 2.5vh;
+    width: 100%;
+    pointer-events: none;
+}
+
+header ul li img
+{
+    width: 1.6vw;
+}
+
+header ul li 
+{
+    display: flex;
+    padding: .5em 1em;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+}
+
+header ul li.theme
+{
+    border-top: 1px solid rgba(0, 0, 0, 0.247);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+header.showResume ul li.theme
+{
+    border-top: 1px solid rgba(0, 0, 0, 0.247);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    padding-left: .7em;
+    padding-right: .7em;
+}
+
+header ul li p
+{
+    display: none;
+    white-space: nowrap;
+    color: #BBBBBB;
+}
+
+header ul li:hover p
+{
+    color: black;
+}
+
+header ul li.theme
+{
+    padding: 2em .8em;
+}
+
+header ul li.userOption
+{
+    padding: 2em .8em;
+}
+
+header.showResume
+{
+    display: flex;
+    width: 6vw;
+    box-shadow: 0px 2px 14px 0px rgba(15, 15, 15, 0.075);
+} 
+
+header.showResume ul 
+{
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+}
+
+header.showResume ul li
+{
+    filter: grayscale(1);
+}
+
+header.showComplete ul
+{
+    display: flex;
+}
+
+header.showComplete
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15em;
+    box-shadow: 0px 2px 14px 0px rgba(15, 15, 15, 0.075);
+}
+
+header.showComplete ul 
+{
+    pointer-events: all;
+    display: flex;
+    transition: all .3s ease-in-out;
+}
+
+header.showComplete ul li:hover
+{
+    background-color: #F4F4F4;
+    border-radius: 10px;
+}
+
+header ul li.theme:hover
+{
+    background-color: inherit;
+    border-radius: 0;
+}
+
+header.showComplete ul li p
+{
+    display: flex;
+}
+
+header ul li .switch
+{
+    display: none;
+}
+
+header.showComplete ul li .switch 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+}
+  
+.switch input 
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 100em;
+}
+
+.slider 
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100em;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before 
+{
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3.2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 100em;
+}
+
+input:checked + .slider 
+{
+    background-color: #2196F3;
+}
+
+input:focus + .slider 
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before 
+{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round 
+{
+    border-radius: 34px;
+}
+
+.slider.round:before 
+{
+    border-radius: 50%;
+}
