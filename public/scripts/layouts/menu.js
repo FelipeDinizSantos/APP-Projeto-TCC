@@ -119,12 +119,12 @@ burgerButton.addEventListener('click', () => {
         }
     }
 
-    if(burgerButton.src == 'http://localhost:3000/assets/burger_open.svg')
+    if(burgerButton.src == '/assets/burger_open.svg')
     {
-        burgerButton.src = 'http://localhost:3000/assets/burger_close.svg';
+        burgerButton.src = '/assets/burger_close.svg';
     }
     else
     {
-        burgerButton.src = 'http://localhost:3000/assets/burger_open.svg';
+        burgerButton.src = '/assets/burger_open.svg';
     }
 });
