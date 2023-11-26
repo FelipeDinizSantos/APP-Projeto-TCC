@@ -111,6 +111,7 @@ header.showResume ul li
 header.showComplete ul
 {
     display: flex;
+    height: 100%;
 }
 
 header.showComplete
