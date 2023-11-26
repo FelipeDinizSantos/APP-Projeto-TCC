@@ -13,11 +13,11 @@ userOption = document.querySelector('.userOption');
 
 home.addEventListener('mouseover', ()=>
 {
-    home.firstElementChild.src = "/assets/home.png";
+    home.firstElementChild.src = "/assets/home.svg";
 });
 home.addEventListener('mouseout', ()=>
 {
-    home.firstElementChild.src= "/assets/homeGray.png";
+    home.firstElementChild.src= "/assets/homeGray.svg";
 })
 
 notification.addEventListener('mouseover', ()=>

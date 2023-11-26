@@ -23,6 +23,7 @@ header img.burgerButton.close
 {
     position: absolute;
     right: 0;
+    margin-right: -.1vw;
     transition: all .2s ease-in-out;
 }
 
@@ -39,13 +40,14 @@ header ul
 
 header ul li img
 {
-    width: 1.6vw;
+    width: 2vw;
 }
 
 header ul li 
 {
     display: flex;
     padding: .5em 1em;
+    font-size: 2.3vh;
     gap: 1em;
     align-items: center;
     cursor: pointer;
@@ -79,12 +81,12 @@ header ul li:hover p
 
 header ul li.theme
 {
-    padding: 2em .8em;
+    padding: 2em 1em;
 }
 
 header ul li.userOption
 {
-    padding: 2em .8em;
+    padding: 1.5em 1em;
 }
 
 header.showResume
@@ -157,8 +159,8 @@ header.showComplete ul li .switch
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 30px;
+    width: 55px;
+    height: 25px;
 }
   
 .switch input 
@@ -187,10 +189,10 @@ header.showComplete ul li .switch
 {
     position: absolute;
     content: "";
-    height: 24px;
-    width: 24px;
+    height: 18px;
+    width: 18px;
     left: 4px;
-    bottom: 3.2px;
+    bottom: 3.75px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -199,12 +201,12 @@ header.showComplete ul li .switch
 
 input:checked + .slider 
 {
-    background-color: #2196F3;
+    background-color: #059862;
 }
 
 input:focus + .slider 
 {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #059862;
 }
 
 input:checked + .slider:before 
