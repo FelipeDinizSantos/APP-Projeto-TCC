@@ -61,8 +61,8 @@ header ul li.theme
 
 header.showResume ul li.theme
 {
-    border-top: 1px solid rgba(0, 0, 0, 0.247);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    border-top: 1px solid #c3c1c157;
+    border-bottom: 1px solid #c3c1c157;
     padding-left: .7em;
     padding-right: .7em;
 }
