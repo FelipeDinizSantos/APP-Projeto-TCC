@@ -16,7 +16,7 @@ main
 
 section.logo img
 {
-    width: 18vw;
+    width: 17vw;
 }
 
 section.container
@@ -37,8 +37,8 @@ section.container .box
     background-color: white;
     content: "";
     padding: 2vh;
-    height: 46vh;
-    width: 17vw;
+    height: 45vh;
+    width: 16vw;
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 0px 2px 13px 0px rgba(15, 15, 15, 0.15);
@@ -55,25 +55,25 @@ section.container .box .gradientBlock
     position: absolute;
     top: 50%;
     left: 0;
-    margin-left: .6vw;
+    margin-left: .56vw;
     width: 1.2vw;
     transform: translate(-50%, -50%);
 }
 
 section.container .box img
 {
-    width: 4vw;
+    width:3.3vw;
 }
 
 section.container .box img[alt="add icon"]
 {
     margin-top: -.2em;
-    width: 4.5vw;
+    width: 4vw;
 }
 
 section.container .box img[alt="add icon"]+h1
 {
-    margin-top: -.3em;
+    margin-top: -.5em;
 }
 
 section.container .box h1
@@ -86,6 +86,7 @@ section.container .box h1
 
 section.container .box p
 {
+    width: 13vw;
     font-size: 2vh;
     color: #8C8E89; 
 }
