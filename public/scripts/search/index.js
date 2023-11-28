@@ -11,12 +11,12 @@ searchBar.addEventListener('click', ()=>
 })
 
 tags.forEach(tag=>
+{
+    tag.addEventListener('click', ()=>
     {
-        tag.addEventListener('click', ()=>
-        {
-            tag.classList.toggle('checked');
-        })
+        tag.classList.toggle('checked');
     })
+})
 
 clearBtn.addEventListener('click', ()=>
 {
@@ -39,7 +39,7 @@ arrow.addEventListener('click', ()=>
     }
     else
     {
-        window.scrollTo(330, 0);
+        window.scrollTo(scrollAmount, 0);
         arrow.classList.remove('up');
         arrow.classList.add('down');
     }
