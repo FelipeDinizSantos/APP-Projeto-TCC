@@ -192,7 +192,7 @@ header.showComplete ul li .switch
     content: "";
     height: 2.3vh;
     width: 1.1vw;
-    left: 4px;
+    left: .3vw;
     bottom: .35vh;
     background-color: white;
     -webkit-transition: .4s;
