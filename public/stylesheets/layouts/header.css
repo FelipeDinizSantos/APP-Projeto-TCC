@@ -24,7 +24,6 @@ header img.burgerButton.close
 {
     position: absolute;
     right: 0;
-    margin-right: -.1vw;
     transition: all .2s ease-in-out;
 }
 
@@ -120,7 +119,7 @@ header.showComplete
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15em;
+    width: 15.5vw;
     box-shadow: 0px 2px 14px 0px rgba(15, 15, 15, 0.075);
 }
 
@@ -161,8 +160,8 @@ header.showComplete ul li .switch
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 22.4px;
+    width: 3vw;
+    height: 3vh;
 }
   
 .switch input 
@@ -191,10 +190,10 @@ header.showComplete ul li .switch
 {
     position: absolute;
     content: "";
-    height: 18.5px;
-    width: 18.5px;
+    height: 2.3vh;
+    width: 1.1vw;
     left: 4px;
-    bottom: 2px;
+    bottom: .3vh;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -213,9 +212,9 @@ input:focus + .slider
 
 input:checked + .slider:before 
 {
-    -webkit-transform: translateX(18px);
-    -ms-transform: translateX(18px);
-    transform: translateX(18px);
+    -webkit-transform: translateX(1.3vw);
+    -ms-transform: translateX(1.3vw);
+    transform: translateX(1.3vw);
 }
 
 .slider.round 

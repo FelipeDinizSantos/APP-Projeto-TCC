@@ -2,7 +2,7 @@
 {
     position: absolute;
     top: 0;
-    margin-top: 30vh;
+    margin-top: 9.3%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,19 +12,30 @@
 .banner .title
 {
     display: flex;
-    margin: 0 auto;
+    align-items: center;
+    gap: 2vw;
+    margin: -2.5vh auto 10vh auto;
     z-index: 2;
+}
+
+.banner h1
+{
+    letter-spacing: .3vw;
 }
 
 .banner .title img
 {
-    width: 3.5vw;
+    width: 3.4vw;
     height: 7vh;
+    margin-left: -2.2vw;
 }
 
 .banner p
 {
     margin: 0 auto;
+    text-align: center;
+    font-size: 2.5vh;
+    width: 60vw;
     z-index: 2;
 }
 
@@ -35,4 +46,52 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+}
+
+.arrow
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 16vh;
+    cursor: grab;
+    width: 9.5vh;
+    transition: all .2s ease-in-out;
+}
+
+.arrow.up
+{
+    left: 47.7%;
+    margin-top: 9.5vh;
+    transform: scaleY(-1); 
+}
+
+.arrow.up:hover
+{
+    margin-top: 9vh;
+}
+
+.arrow.down:hover
+{
+    margin-top: 16.5vh;
+}
+
+.searchBar
+{
+    margin-top: -25vh;
+    margin-bottom: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar input
+{
+    width: 35vw;
+    border: none;
+    border-radius: 5vh;
+    padding: 2.7vh;
+    box-shadow: 2px 4px 11px 3px rgba(0, 0, 0, 0.055);
 }

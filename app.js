@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
 
 app.use('', indexRouter);
-app.use('/pesquisar', searchRouter);
+app.use('/pesquisa', searchRouter);
 
 app.listen(process.env.PORT ? Number(process.env.PORT) : 3000, ()=>
 {
