@@ -128,3 +128,17 @@ burgerButton.addEventListener('click', () => {
         burgerButton.src = '/assets/burger_close.svg';
     }
 });
+
+window.addEventListener('scroll', ()=>
+{
+    burgerButton.src = '/assets/burger_open.svg';
+
+    burgerButton.classList.remove('close');
+    burgerButton.classList.add('open');
+    menu.classList.remove('showResume');
+
+    if(menu.classList.contains('showComplete'))
+    {
+        menu.classList.remove('showComplete');
+    }
+})

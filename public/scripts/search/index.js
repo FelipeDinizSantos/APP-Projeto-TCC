@@ -5,6 +5,18 @@ const clearBtn = document.querySelector('.clear')
 const searchBtn = document.querySelector('.goButton');
 const input = document.querySelector('.searchInput');
 
+window.addEventListener('scroll', ()=>
+{
+    const scrollTop = window.scrollY;
+    const bannerHeight = document.querySelector('.banner').clientHeight
+
+    if(scrollTop < bannerHeight)
+        searchBar.classList.remove('principal');
+    if (scrollTop > bannerHeight) 
+        searchBar.classList.add('principal');
+    
+})
+
 searchBar.addEventListener('click', ()=>
 {
     input.value='';
