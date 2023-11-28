@@ -115,7 +115,7 @@
     transform: translateY(-.5vh);
 }
 
-.searchBar input:focus + .claer
+.searchBar input:focus + .clear
 {
     margin-top: -1vh;
 }
@@ -179,6 +179,12 @@
     border-radius: 1vw;
     border: .5vh solid #bdbdbd;
     cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.tag.checked
+{
+    transform: translateY(-.5vh);
 }
 
 .tag.checked,
