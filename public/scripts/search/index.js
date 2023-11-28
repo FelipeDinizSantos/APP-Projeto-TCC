@@ -11,10 +11,17 @@ window.addEventListener('scroll', ()=>
     const bannerHeight = document.querySelector('.banner').clientHeight
 
     if(scrollTop < bannerHeight)
+    {
         searchBar.classList.remove('principal');
-    if (scrollTop > bannerHeight) 
+        arrow.classList.add('down');
+        arrow.classList.remove('up');
+    }
+    if (scrollTop > bannerHeight)
+    {
         searchBar.classList.add('principal');
-    
+        arrow.classList.remove('down');
+        arrow.classList.add('up');
+    } 
 })
 
 searchBar.addEventListener('click', ()=>
