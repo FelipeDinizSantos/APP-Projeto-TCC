@@ -89,9 +89,22 @@
 
 .searchBar input
 {
-    width: 35vw;
+    width: 37vw;
+    font-size: 2.5vh;
     border: none;
     border-radius: 5vh;
-    padding: 2.7vh;
+    padding: 3vh 3.5vw 3vh 3.5vw;
     box-shadow: 2px 4px 11px 3px rgba(0, 0, 0, 0.055);
+    transition: all .5s ease-in-out;
+}
+
+.searchBar input::placeholder
+{
+    color: #C6C6C6;
+}
+
+.searchBar input:focus
+{
+    outline: none;
+    transform: translateY(-.5vh);
 }
