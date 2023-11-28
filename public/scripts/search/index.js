@@ -1,4 +1,5 @@
 const arrow = document.querySelector('.arrow');
+const searchBar = document.querySelector('.searchBar');
 
 arrow.addEventListener('click', ()=>
 {
@@ -17,5 +18,6 @@ arrow.addEventListener('click', ()=>
         arrow.classList.remove('up');
         arrow.classList.add('down');
     }
-        
+
+    searchBar.classList.toggle('principal');
 })

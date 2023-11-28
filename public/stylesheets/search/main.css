@@ -2,7 +2,7 @@
 {
     position: absolute;
     top: 0;
-    margin-top: 9.3%;
+    margin-top: 9%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -51,10 +51,9 @@
 .arrow
 {
     position: absolute;
-    top: 50%;
+    top: 43.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 16vh;
     cursor: grab;
     width: 9.5vh;
     transition: all .2s ease-in-out;
@@ -62,25 +61,25 @@
 
 .arrow.up
 {
+    top: 39%;
     left: 47.7%;
-    margin-top: 9.5vh;
     transform: scaleY(-1); 
 }
 
 .arrow.up:hover
 {
-    margin-top: 9vh;
+    top: 38.5%;
 }
 
 .arrow.down:hover
 {
-    margin-top: 16.5vh;
+    top: 44%;
 }
 
 .searchBar
 {
+    position: relative;
     margin-top: -25vh;
-    margin-bottom: 100vh;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -90,12 +89,19 @@
 .searchBar input
 {
     width: 37vw;
+    color: #C6C6C6;
     font-size: 2.5vh;
     border: none;
     border-radius: 5vh;
-    padding: 3vh 3.5vw 3vh 3.5vw;
+    padding: 3vh 8vw 3vh 3.5vw;
     box-shadow: 2px 4px 11px 3px rgba(0, 0, 0, 0.055);
     transition: all .5s ease-in-out;
+}
+
+
+.searchBar.principal input
+{
+    width: 50vw;
 }
 
 .searchBar input::placeholder
@@ -107,4 +113,95 @@
 {
     outline: none;
     transform: translateY(-.5vh);
+}
+
+.searchBar input:focus + .close
+{
+    margin-top: -1vh;
+}
+
+.searchBar input:focus + .close + .goButton
+{
+    margin-top: -.4vh;
+}
+
+.searchBar.principal .goButton
+{
+    margin-left: 22.5vw;
+}
+
+.goButton
+{
+    position: absolute;
+    width: 5.5vw;
+    top: 50%;
+    left: 50%;
+    margin-top: .2vh;
+    margin-left: 16vw;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all .6s ease-in-out;
+}
+
+.goButton:hover
+{
+    width: 5.7vw;
+    transition: all .2s ease-in;
+}
+
+#tagsTitle
+{
+    position: relative;
+    margin-top: 13.8vh;
+    color: #484945;
+    text-align: center;
+}
+
+.tags
+{
+    display: flex;
+    width: 50%;
+    margin-left: 24.5vw;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.tag
+{
+    color: #636560;
+    text-align: center;
+    padding: 1vw;
+    font-size: 2.5vh;
+    width: 12vw;
+    border-radius: 1vw;
+    border: .5vh solid #bdbdbd;
+    cursor: pointer;
+}
+
+.tag.checked,
+.tag:hover
+{
+    border-color: #7FEF75;
+}
+
+.close
+{
+    position: absolute;
+    margin-left: 24vw;
+    width: 1.6vw;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+.searchBar.principal .close
+{
+    margin-left: 37vw;
+}
+
+.close:hover
+{
+    transform: rotate(180deg);
 }
