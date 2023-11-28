@@ -115,12 +115,12 @@
     transform: translateY(-.5vh);
 }
 
-.searchBar input:focus + .close
+.searchBar input:focus + .claer
 {
     margin-top: -1vh;
 }
 
-.searchBar input:focus + .close + .goButton
+.searchBar input:focus + .clear + .goButton
 {
     margin-top: -.4vh;
 }
@@ -187,7 +187,7 @@
     border-color: #7FEF75;
 }
 
-.close
+.clear
 {
     position: absolute;
     margin-left: 24vw;
@@ -196,12 +196,12 @@
     transition: all .6s ease-in-out;
 }
 
-.searchBar.principal .close
+.searchBar.principal .clear
 {
     margin-left: 37vw;
 }
 
-.close:hover
+.clear:hover
 {
     transform: rotate(180deg);
 }
