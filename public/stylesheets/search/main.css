@@ -51,6 +51,7 @@
 
 .arrow
 {
+    display: none;
     position: absolute;
     left: 50%;
     margin-top: -48vh;
@@ -62,6 +63,7 @@
 
 .arrow.up
 {
+    display: flex;
     margin-top: -49vh;
     left: 47.7%;
     transform: scaleY(-1); 
@@ -72,15 +74,10 @@
     margin-top: -49.5vh;
 }
 
-.arrow.down:hover
-{
-    margin-top: -47.5vh;
-}
-
 .searchBar
 {
     position: relative;
-    margin-top: -25vh;
+    margin-top: -30vh;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -122,6 +119,7 @@
 
 .goButton
 {
+    display: none;
     position: absolute;
     width: 5.5vw;
     top: 50%;
@@ -131,6 +129,11 @@
     cursor: pointer;
     transform: translate(-50%, -50%);
     transition: all .4s ease-in-out;
+}
+
+.goButton.show
+{
+    display: flex;
 }
 
 .goButton:hover
@@ -143,8 +146,8 @@
 {
     position: relative;
     font-size: 4.2vh;
-    margin-top: 13.8vh;
-    margin-bottom: 2.5vh;
+    width: fit-content;
+    margin: 4vh auto 2.5vh auto;
     color: #484945;
     text-align: center;
 }
@@ -152,26 +155,45 @@
 .tags
 {
     display: flex;
-    width: 50%;
-    margin-left: 24.5vw;
+    width: 41%;
+    margin-left: 28.5vw;
     justify-content: center;
     gap: 2vw;
     flex-wrap: wrap;
-    margin-top: 5vh;
+    margin-top: 3.5vh;
     margin-bottom: 12vh;
+}
+
+.tags.transparent
+{
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.411) 200%);
 }
 
 .tag
 {
+    position: relative;
     color: #636560;
     text-align: center;
     padding: 1vw;
     font-size: 2.5vh;
     width: 12vw;
-    border-radius: 1vw;
-    border: .5vh solid #bdbdbd;
     cursor: pointer;
     transition: all .5s ease-in-out;
+}
+
+.tag::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1vw;
+    padding: .2vw; 
+    background:linear-gradient(180deg,#BABABA,#bababa09); 
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
 }
 
 .tag.checked
@@ -182,21 +204,22 @@
 .tag.checked,
 .tag:hover
 {
-    border-color: #7FEF75;
+
 }
 
 .clear
 {
+    display: none;
     position: absolute;
-    margin-left: 24vw;
     width: 1.6vw;
+    margin-left: 44vw;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 
-.searchBar.principal .clear
+.clear.show
 {
-    margin-left: 37vw;
+    display: flex;
 }
 
 .clear:hover
