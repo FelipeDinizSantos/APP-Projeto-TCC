@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     gap: 2vw;
-    font-size: 2vh;
+    font-size: 2.3vh;
     margin: -2.5vh auto 10vh auto;
     z-index: 2;
 }
@@ -77,7 +77,7 @@
 .searchBar
 {
     position: relative;
-    margin-top: -30vh;
+    margin-top: -24vh;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -147,7 +147,7 @@
     position: relative;
     font-size: 4.2vh;
     width: fit-content;
-    margin: 4vh auto 2.5vh auto;
+    margin: 13vh auto 6vh auto;
     color: #484945;
     text-align: center;
 }
@@ -169,8 +169,7 @@
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.411) 200%);
 }
 
-.tag
-{
+.tag {
     position: relative;
     color: #636560;
     text-align: center;
@@ -178,33 +177,15 @@
     font-size: 2.5vh;
     width: 12vw;
     cursor: pointer;
+    border-radius: 1vw;
+    border: .15vw solid #BABABA; 
     transition: all .5s ease-in-out;
 }
 
-.tag::before
-{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 1vw;
-    padding: .2vw; 
-    background:linear-gradient(180deg,#BABABA,#bababa09); 
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude; 
-}
-
-.tag.checked
-{
-    transform: translateY(-.5vh);
-}
-
 .tag.checked,
-.tag:hover
-{
-
+.tag:hover {
+    transform: translateY(-.5vh);
+    box-shadow: 0px 4px 7px 0px #00000021;
 }
 
 .clear
