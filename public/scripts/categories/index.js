@@ -1,56 +1,49 @@
-const arrowBtn = document.querySelector('.openOptions');
-const optionContainer = document.querySelector('.container .options');
-const roadmaps = document.querySelectorAll('.roadmapsContainer p');
-const optionsOfContainer = document.querySelectorAll('.options p');
+document.querySelector('.container').addEventListener('click', (event) => {
+    const arrowBtn = document.querySelector('.openOptions');
+    const optionContainer = document.querySelector('.container .options');
+    const roadmaps = document.querySelectorAll('.roadmapsContainer p');
+    const optionsOfContainer = document.querySelectorAll('.options p');
 
-arrowBtn.addEventListener('click', ()=>
-{
-    optionContainer.classList.toggle('show');
-    arrowBtn.classList.toggle('invert');
-})
+    if (event.target.classList.contains('openOptions')) {
+        optionContainer.classList.toggle('show');
+        arrowBtn.classList.toggle('invert');
+    }
 
-optionsOfContainer.forEach(element => {
-    element.addEventListener('click', (event) => {
-        let previousImage = document.querySelector('.categoryTitle img').src;
-        let previousTitle = document.querySelector('.categoryTitle .title').textContent;
+    if (event.target.classList.contains('titleOp')) {
+        const previousImage = document.querySelector('.categoryTitle img').src;
+        const previousTitle = document.querySelector('.categoryTitle .title').textContent;
 
         document.querySelector('.categoryTitle .title').textContent = event.target.textContent;
         document.querySelector('.categoryTitle img').src = event.target.parentNode.querySelector('img').src;
 
         event.target.textContent = previousTitle;
         event.target.parentNode.querySelector('img').src = previousImage;
-    });
+    }
+
+    if (event.target.classList.contains('titleOp')) {
+        const index = Array.from(optionsOfContainer).indexOf(event.target.parentNode);
+        switch (index) {
+            case 0:
+                setRoadmapsContent(["Habilidades de Comunicação", "Educação Financeira", "Habilidades Sociais e Colaboração", "Autonomia e Autogestão"]);
+                break;
+            case 1:
+                setRoadmapsContent(["Design Gráfico", "Animação Digital", "UX/UI Design", "Ilustração Digital"]);
+                break;
+            case 2:
+                setRoadmapsContent(["Gestão Ambiental", "Energias Renováveis", "Conservação da Biodiversidade", "Desenvolvimento Sustentável"]);
+                break;
+            case 3:
+                setRoadmapsContent(["Nutrição e Alimentação Saudável", "Mindfulness e Bem-Estar Mental", "Fitness e Exercícios Funcionais", "Medicina Preventiva"]);
+                break;
+            default:
+                break;
+        }
+    }
 });
 
-
-optionsOfContainer[0].addEventListener('click', ()=>
-{
-    roadmaps[0].innerHTML = "Habilidades de Comunicação";
-    roadmaps[1].innerHTML = "Educação Financeira";
-    roadmaps[2].innerHTML = "Habilidades Sociais e Colaboração";
-    roadmaps[3].innerHTML = "Autonomia e Autogestão";
-})
-
-optionsOfContainer[1].addEventListener('click', ()=>
-{
-    roadmaps[0].innerHTML = "Design Gráfico";
-    roadmaps[1].innerHTML = "Animação Digital";
-    roadmaps[2].innerHTML = "UX/UI Design";
-    roadmaps[3].innerHTML = "Ilustração Digital";
-})
-
-optionsOfContainer[2].addEventListener('click', ()=>
-{
-    roadmaps[0].innerHTML = "Gestão Ambiental";
-    roadmaps[1].innerHTML = "Energias Renováveis";
-    roadmaps[2].innerHTML = "Conservação da Biodiversidade";
-    roadmaps[3].innerHTML = "Desenvolvimento Sustentável";
-})
-
-optionsOfContainer[3].addEventListener('click', ()=>
-{
-    roadmaps[0].innerHTML = "Nutrição e Alimentação Saudável";
-    roadmaps[1].innerHTML = "Mindfulness e Bem-Estar Mental";
-    roadmaps[2].innerHTML = "Fitness e Exercícios Funcionais";
-    roadmaps[3].innerHTML = "Medicina Preventivaigital";
-})
+function setRoadmapsContent(contents) {
+    const roadmaps = document.querySelectorAll('.roadmapsContainer p');
+    contents.forEach((content, index) => {
+        roadmaps[index].innerHTML = content;
+    });
+}
