@@ -6,6 +6,7 @@ const optionsOfContainer = document.querySelectorAll('.options p');
 arrowBtn.addEventListener('click', ()=>
 {
     optionContainer.classList.toggle('show');
+    arrowBtn.classList.toggle('invert');
 })
 
 optionsOfContainer.forEach(element => {
