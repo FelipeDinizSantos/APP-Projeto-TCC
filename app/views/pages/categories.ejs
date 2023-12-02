@@ -1,0 +1,50 @@
+<%- include('../layouts/header', 
+    {
+        title: 'CO.GUI - Pesquisar', 
+        styleLinks: ['/stylesheets/categories/main.css'],
+        scriptsLinks: ['/scripts/categories/index.js']
+    }) 
+%>
+
+    <div class="banner">
+        <img src="/assets/bannerCategoriesPage.svg" class="bannerBackground" alt="bannerSearchPage">
+        <div class="title">
+            <img src="/assets/categoriesIcon.svg">
+            <h1>CATEGORIAS</h1>
+        </div>
+        <p>Descubra diferentes tipos de roadmaps prontos e estruturados navegando por categorias, que englobam disciplina e ferramentas de diversas áreas de conhecimento.</p>
+    </div>
+
+    <main>
+        <div class="container">
+            <p class="categoryTitle"> <img src="/assets/tecCategoryIcon.svg"> <span class="title" style="color: #636560;">Tecnologia</span></p>
+            <div class="options">
+                <p>
+                    <img src="/assets/educationCategoryIcon.svg" class="imageOp">
+                    <span class="titleOp">Educação</span>
+                </p>
+                <p>
+                    <img src="/assets/designCategoryIcon.svg" class="imageOp">
+                    <span class="titleOp">Design</span>
+                </p>
+                <p>
+                    <img src="/assets/sustainabilityCategoryIcon.svg" class="imageOp">
+                    <span class="titleOp">Sustentavel</span>
+                </p>
+                <p>
+                    <img src="/assets/lifeCategoryIcon.svg" class="imageOp">
+                    <span class="titleOp">Saúde</span>
+                </p>
+            </div>
+            <img src="/assets/arrowCategoryContainer.svg" class="openOptions">
+        </div>
+
+        <div class="roadmapsContainer">
+            <p> Front-end </p>
+            <p> Administração de Sistemas </p>
+            <p> Segurança da Informação </p>
+            <p> Ciências de Dados </p>
+        </div>
+    </main>
+</body>
+</html>

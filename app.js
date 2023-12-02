@@ -4,6 +4,7 @@ const app = express();
 
 const indexRouter = require('./app/routes/index.js');
 const searchRouter = require('./app/routes/search.js');
+const categoriesRouter = require('./app/routes/categories.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,6 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use('', indexRouter);
 app.use('/pesquisa', searchRouter);
+app.use('/categorias', categoriesRouter)
 
 app.listen(process.env.PORT ? Number(process.env.PORT) : 3000, ()=>
 {
