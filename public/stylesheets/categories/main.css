@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;500&display=swap');
+
 .banner
 {
     position: absolute;
@@ -57,6 +59,7 @@ main
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-weight: 500;
 }
 
 .container
@@ -64,12 +67,6 @@ main
     position: relative;
     display: flex;
     flex-direction: row;
-    background-image: url('/assets/categoryContainer.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vh;
-    box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.103);
-    border: 1px solid transparent;
     position: relative;
     width: 15.5vw;
     padding: 2.2vh;
@@ -81,6 +78,18 @@ main
     z-index: 100;
     margin-top: -7.4vh;
     margin-left: -2vh;
+}
+
+.container .backgroundImageContainer
+{
+    position: absolute;
+    width: 18vw;
+    margin-top: -.5vh;
+    margin-left: -.1vw;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
 }
 
 .container .categoryTitle 
@@ -192,23 +201,23 @@ main
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5vw;
+    gap: 3.3vw;
     width: 50%;
-    margin-top: 14vh;
+    margin-top: 12vh;
     margin-bottom: 13vh;
 }
 
 .roadmapsContainer p
 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 23vw;
     height: 10vh;
-    padding: 2.3vh;
-    font-size: 1.2vw;
+    padding: 2.3vh 2.7vh;
+    font-size: 1.1vw;
     background-color: #FFF;
+    border: .2vw solid #5100ff10;
     color: #636560;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.068);
     border-radius: .6vw;
