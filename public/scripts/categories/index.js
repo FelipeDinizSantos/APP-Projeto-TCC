@@ -10,11 +10,11 @@ arrowBtn.addEventListener('click', ()=>
 
 optionsOfContainer.forEach(element => {
     element.addEventListener('click', (event) => {
-        let previousImage = document.querySelector('.imageOp').src;
+        let previousImage = document.querySelector('.categoryTitle img').src;
         let previousTitle = document.querySelector('.categoryTitle .title').textContent;
 
         document.querySelector('.categoryTitle .title').textContent = event.target.textContent;
-        document.querySelector('.imageOp').src = event.target.parentNode.querySelector('img').src;
+        document.querySelector('.categoryTitle img').src = event.target.parentNode.querySelector('img').src;
 
         event.target.textContent = previousTitle;
         event.target.parentNode.querySelector('img').src = previousImage;
