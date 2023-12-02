@@ -58,7 +58,7 @@ main
     flex-direction: column;
     margin-top: -42vh;
     justify-content: center;
-    letter-spacing: 1.881px;
+    letter-spacing: 1.3px;
     align-items: center;
     width: 100%;
     font-weight: 500;
@@ -104,12 +104,13 @@ main
     position: absolute;
     left: 0;
     margin-left: 1.5vw;
-    width: 2vw;
+    width: 1.9vw;
 }
 
-.container p.categoryTitle span
+.container p.categoryTitle span.title
 {
     color: #636560;
+    font-size: 2.3vh;
 }
 
 .container .openOptions
@@ -180,6 +181,7 @@ main
 
 .container .options p span
 {
+    font-size: 2.3vh;
     color: #636560;
 }
 
@@ -218,7 +220,7 @@ main
     width: 23vw;
     height: 10vh;
     padding: 2.3vh 2.7vh;
-    font-size: 1.1vw;
+    font-size: 2.3vh;
     background-color: #FFF;
     border: .5px solid #5100ff23;
     color: #636560;
