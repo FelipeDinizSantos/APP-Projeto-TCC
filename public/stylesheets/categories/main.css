@@ -69,13 +69,11 @@ main
     position: relative;
     display: flex;
     flex-direction: row;
-    position: relative;
     width: 15.5vw;
+    align-items: center;
+    justify-content: center;
     padding: 2.2vh;
     border-radius: .6vw;
-    gap: 1vw;
-    align-items: center;
-    justify-content: space-evenly;
     font-size: 2.5vh;
     z-index: 100;
     margin-top: -7.4vh;
@@ -101,9 +99,7 @@ main
 
 .container p.categoryTitle img
 {
-    position: absolute;
-    left: 0;
-    margin-left: 1.5vw;
+    margin-left: -1vw;
     width: 1.9vw;
 }
 
@@ -133,7 +129,6 @@ main
 {
     display: flex;
     align-items: center;
-    gap: 1vw;
 }
 
 .container .title
@@ -174,6 +169,7 @@ main
     font-size: 2.3vh;
     padding: 1vh;
     cursor: pointer;
+    gap: .7vw;
     transition: all .2s ease-in-out;
     border-radius: .8vw;
     cursor: pointer;
