@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;500&display=swap');
 
+
 .banner
 {
     position: absolute;
-    top: 17.5vh;
+    top: 15.5vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@
     display: flex;
     align-items: center;
     gap: 2vw;
-    font-size: 2.8vh;
+    font-size: 2vh;
     margin: -2.5vh auto 10vh auto;
     z-index: 2;
 }
@@ -57,6 +58,7 @@ main
     flex-direction: column;
     margin-top: -42vh;
     justify-content: center;
+    letter-spacing: 1.881px;
     align-items: center;
     width: 100%;
     font-weight: 500;
@@ -147,12 +149,12 @@ main
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: -25vh;
-    margin-right: -26vh;
-    width: 13.7vw;
+    margin-top: -26.5vh;
+    margin-right: -29vh;
+    width: 15vw;
     padding-left: 1vw;
     padding-right: 1vw;
-    padding-top: 2.5vh;
+    padding-top: 3.2vh;
     gap: .7vh;
     height: 0vh;
     z-index: 1000;
@@ -163,7 +165,7 @@ main
 .container .options.show
 {
     display: flex;
-    height: 31.5vh;
+    height: 33vh;
 }
 
 .container .options p 
