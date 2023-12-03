@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;500&display=swap');
 
+.lateralMenu
+{
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 48vw;
+    height: 100vh;
+    margin-right: -100vh;
+    z-index: 10000000;
+    transition: all .5s ease-in-out;
+}
+
+.lateralMenu.show
+{
+    margin-right: 0;
+}
+
+.closeLateralMenuBtn
+{
+    position: absolute;
+    width: 1vw;
+    top: 0;
+    right: 0;
+    margin: 4vh 6.5vh;
+    cursor: pointer;
+}
+
+.overlay
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000070;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    display: none;
+}
+
+main.menuActive
+{
+    pointer-events: none;
+}
+
 main
 {
     width: 100%;
@@ -438,6 +483,7 @@ span.horizontal
     color: white;
     background: linear-gradient(90deg, #9B11EF 14.29%, #683DE5 91.52%);
     filter: drop-shadow(0px 4.41px 16.538px #D2D6E4) drop-shadow(-5.513px -5.513px 33.077px #FFF);
+    cursor: pointer;
 }
 
 .contentContainer .information .descriptionInformation
@@ -456,6 +502,7 @@ span.horizontal
     box-shadow: 0px 2px 0px 1px rgba(186, 186, 186, 0.301);
     color: #636560;
     letter-spacing: 1.5px;
+    cursor: pointer;
 }
 
 .contentContainer .information .descriptionInformation img

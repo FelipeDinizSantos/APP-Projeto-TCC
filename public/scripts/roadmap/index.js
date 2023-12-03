@@ -40,4 +40,29 @@ document.querySelector('main').addEventListener('click', (event) =>
             image.src = '/assets/concludedFalse.png';
         }
     }
+
+    if(event.target.classList.contains('titleInformation') || event.target.classList.contains('descriptionInformation'))
+    {
+        let lateralMenu = document.querySelector('.lateralMenu');
+        let overlay = document.querySelector('.overlay');
+        let main = document.querySelector('main');
+
+        lateralMenu.classList.add('show');
+        overlay.style.display='block';
+        main.classList.add('menuActive');
+    }
 });
+
+document.querySelector('.lateralMenu').addEventListener('click', (event)=>
+{
+    if(event.target.classList.contains('closeLateralMenuBtn'))
+    {
+        let lateralMenu = document.querySelector('.lateralMenu');
+        let overlay = document.querySelector('.overlay');
+        let main = document.querySelector('main');
+
+        lateralMenu.classList.remove('show');
+        overlay.style.display='none';
+        main.classList.remove('menuActive');
+    }
+})
