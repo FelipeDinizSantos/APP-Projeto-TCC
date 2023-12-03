@@ -12,6 +12,7 @@ main
 {
     display: flex;
     align-items: center;
+    margin: 15vh 0 10vh 0; 
     width: 100%;
 }
 
@@ -25,11 +26,19 @@ main
 
 .path ul li
 {
+    color: #C3C1C1;
+    font-weight: 200;
     display: flex;
     align-items: center;
-    font-size: 4.5vh;
-    gap: 1vw;
-    letter-spacing: 4.2px;
+    font-size: 5.5vh;
+    letter-spacing: 5px;
+}
+
+.path ul li:last-child
+{
+    color: rgba(140, 142, 137, 0.69);
+    gap: .5vw; 
+    letter-spacing: 7px;
 }
 
 .path ul li img
@@ -91,14 +100,20 @@ main
 .myProgress ul
 {
     padding-top: 1.5vh;
-    gap: 3vw;
+    gap: 5vw;
     display: flex;
+}
+
+.myProgress ul.notStarted li span:last-child
+{
+    color: #DCDCDC;
 }
 
 .myProgress ul li
 {
     color: #636560;
     display: flex;
+    font-weight: 400;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -123,23 +138,21 @@ main
     font-size: 4.7vh;
 }
 
-.myProgress ul li:last-child span:last-child
-{
-    color: #DCDCDC;
-}
-
 .gadgets
 {
     color: #636560;
+    font-weight: 500;
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    margin-top: 1.5vh;
+    font-size: 2vh;
 }
 
 .gadgets ul
 {
     display: flex;
-    gap: 2vw;
+    gap: 3vw;
     margin-left: 9.5vw;
 }
 
@@ -147,12 +160,12 @@ main
 {
     display: flex;
     align-items: center;
-    gap: .5vw;
+    gap: .7vw;
 }
 
 .gadgets ul li:first-child
 {
-    padding: 1vh;
+    padding: 1.8vh 2vh;
     background: linear-gradient(180deg, #ffffff 70%, #e6e6e609);
     box-shadow: 1px 4px 8px 0px #d2d6e4a6;
     border-radius: 1vh;
@@ -189,7 +202,8 @@ main
 .download
 {
     display: flex;
-    margin-top: 2.6vh;
+    margin-top: 4.5vh;
+    margin-bottom: 10vh;
     justify-content: flex-start;
     width: 100%;
 }
@@ -197,7 +211,6 @@ main
 .download ul
 {
     display: flex;
-    font-size: 2vh;
     gap: .5vw;
     align-items: center;
 }
@@ -205,19 +218,22 @@ main
 .download ul li
 {
     display: flex;
-    font-size: 2vh;
     gap: .5vw;
     align-items: center;
+    cursor: pointer;
 }
 
 .download ul li p
 {
     text-decoration: underline;
+    color: #23253A;
+    font-weight: 500;
+    font-size: 2vh;
 }
 
 .download li img
 {
-    width: 1.2vw;
+    width: 1.5vw;
     border-color: transparent;
 }
 
@@ -238,7 +254,7 @@ main
     align-items: center;
     padding: 15px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0vh auto;
     margin-top: -4vh;
 }
 
@@ -281,7 +297,7 @@ main
     width: 9.6vw;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
-    opacity: 0.5;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -319,7 +335,6 @@ img[alt='stepTwo']
 img[alt='stepOne']
 {
     transform: translateY(-1vh);
-    z-index: 0;
 }
 
 img[alt='stepThree']
@@ -361,7 +376,7 @@ img[alt='arrowRoadmap']
     font-size: 4vh;
     letter-spacing: 3px;
     color: #23253A;
-    margin-bottom: 1.5vh;
+    margin-bottom: 4vh;
 }
 
 .descriptionRoadmap p
@@ -383,14 +398,15 @@ span.line
     height: 10vh;
     width: .3vw;
     z-index: 1000;
-    background: linear-gradient(90deg, #A036F4 36.94%, #5200FF 67.9%);
+    background: linear-gradient(180deg, #A036F4 36.94%, #5200FF 67.9%);
 }
 
 span.horizontal
 {
-    height: .5vh;
+    height: .6vh;
     width: 22vw;
     z-index: 0;
+    background: linear-gradient(to right, #A036F4 36.94%, #5200FF 67.9%);
 }
 
 .principalTitle
@@ -402,9 +418,10 @@ span.horizontal
     letter-spacing: 2.8px;
     color: #636560;
     padding: 1.8vh;
-    background-color: white;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #A036F4 36.94%, #5200FF 67.9%) border-box;
+	border-radius: 50em;
+	border: 3px solid transparent;
     border-radius: .5vw;
-    border: .2vw solid #683DE5;
     margin-left: auto;
     margin-right: auto;
 }
@@ -413,14 +430,15 @@ span.horizontal
 {
     display: flex;
     margin-top: 22vh;
-    margin-left: 17vw;
+    margin-left: 10vw;
 }
 
 .contentContainer .information .titleInformation
 {
-    width: 10vw;
-    padding: 1.7vh;
+    width: 15vw;
+    padding: 2vh;
     font-size: 2.4vh;
+    font-weight: 600;
     border-radius: .5vw;
     letter-spacing: 3px;
     text-align: center;
@@ -433,10 +451,12 @@ span.horizontal
 {
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     padding: 2vh;
     gap: 1vw;
-    font-size: 2.4vh;
-    width: 17w;
+    font-size: 2.2vh;
+    width: 25vw;
     border-radius: .5vw;
     box-shadow: 0px 2px 0px 1px rgba(186, 186, 186, 0.301);
     color: #636560;
@@ -453,7 +473,7 @@ span.horizontal
     z-index: 1000;
     display: flex;
     justify-content: center;
-    gap: 5.5vh;
+    gap: 8vh;
     align-items: center;
     flex-direction: column;
 }
@@ -462,7 +482,7 @@ span.horizontal
 {
     flex-direction: row-reverse;
     margin-top: 22vh;
-    margin-right: 17vw;
+    margin-right: 10vw;
 }
 
 .conclude
@@ -470,7 +490,7 @@ span.horizontal
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 19vh;
+    margin-top: 28.5vh;
     width: 100%;
     margin-bottom: 30vh;
 }

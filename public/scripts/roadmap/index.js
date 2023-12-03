@@ -9,19 +9,19 @@ document.querySelector('main').addEventListener('click', (event) =>
         clickedItem.src = previousImage;
     }
 
-    if(event.target.classList.contains('favoriteButton') || event.target.closest('.favoriteButton'))
-    {
-        let imageHearth = document.querySelector('.favoriteIcon');
-        if(imageHearth.classList.contains('favorite'))
-        {
-            imageHearth.src='/assets/unFavoriteContent.svg';
-        }
-        else
-        {
-            imageHearth.src = '/assets/favoriteContent.svg';
-        }
-        imageHearth.classList.toggle('favorite');
-    }
+    // if(event.target.classList.contains('favoriteButton') || event.target.closest('.favoriteButton'))
+    // {
+    //     let imageHearth = document.querySelector('.favoriteIcon');
+    //     if(imageHearth.classList.contains('favorite'))
+    //     {
+    //         imageHearth.src='/assets/unFavoriteContent.svg';
+    //     }
+    //     else
+    //     {
+    //         imageHearth.src = '/assets/favoriteContent.svg';
+    //     }
+    //     imageHearth.classList.toggle('favorite');
+    // }
 
     if(event.target.classList.contains('false') || event.target.classList.contains('true'))
     {
