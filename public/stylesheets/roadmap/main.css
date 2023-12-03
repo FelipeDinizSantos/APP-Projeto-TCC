@@ -12,7 +12,7 @@ main
 {
     display: flex;
     align-items: center;
-    margin: 15vh 0 10vh 0; 
+    margin: 15vh 0 13vh 0; 
     width: 100%;
 }
 
@@ -36,25 +36,15 @@ main
 
 .path ul li:last-child
 {
-    color: rgba(140, 142, 137, 0.69);
+    color: #8c8e89b0;
     gap: .5vw; 
+    font-weight: 600;
     letter-spacing: 7px;
 }
 
 .path ul li img
 {
     width: 2vw;
-}
-
-.path ul li:first-child
-{
-    color: #C3C1C1;
-}
-
-.path ul li:last-child
-{
-    color: #8c8e89b0;    
-    font-weight: 600;
 }
 
 .progress
@@ -146,7 +136,7 @@ main
     justify-content: flex-start;
     width: 100%;
     margin-top: 1.5vh;
-    font-size: 2vh;
+    font-size: 2.3vh;
 }
 
 .gadgets ul
@@ -203,7 +193,7 @@ main
 {
     display: flex;
     margin-top: 4.5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 11.5vh;
     justify-content: flex-start;
     width: 100%;
 }
@@ -227,8 +217,9 @@ main
 {
     text-decoration: underline;
     color: #23253A;
-    font-weight: 500;
-    font-size: 2vh;
+    font-weight: 700;
+    font-size: 2.4vh;
+    letter-spacing: 1px;
 }
 
 .download li img
@@ -269,6 +260,7 @@ main
 .title h1
 {
     position: absolute;
+    margin-top: -.2vh;
     top: 50%;
     color: #636560;
     left: 50%;
@@ -418,7 +410,7 @@ span.horizontal
     letter-spacing: 2.8px;
     color: #636560;
     padding: 1.8vh;
-    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #A036F4 36.94%, #5200FF 67.9%) border-box;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #A036F4 36.94%, #5200FF 67.9%) border-box; 
 	border-radius: 50em;
 	border: 3px solid transparent;
     border-radius: .5vw;
@@ -453,10 +445,11 @@ span.horizontal
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 2vh;
     gap: 1vw;
     font-size: 2.2vh;
-    width: 25vw;
+    width: 20vw;
+    height: 9vh;
+    padding: 2vh;
     border-radius: .5vw;
     box-shadow: 0px 2px 0px 1px rgba(186, 186, 186, 0.301);
     color: #636560;
@@ -498,6 +491,7 @@ span.horizontal
 .conclude img
 {
     margin-left: .8vw;
-    width: 4.5vw;
+    width: 5vw;
     cursor: pointer;
+    z-index: 1000;
 }
