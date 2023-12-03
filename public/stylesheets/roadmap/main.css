@@ -410,7 +410,7 @@ span.horizontal
     letter-spacing: 2.8px;
     color: #636560;
     padding: 1.8vh;
-    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #A036F4 36.94%, #5200FF 67.9%) border-box; 
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #5200FF 36.94%, #A036F4 67.9%) border-box; 
 	border-radius: 50em;
 	border: 3px solid transparent;
     border-radius: .5vw;
