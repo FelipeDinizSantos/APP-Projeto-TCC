@@ -36,9 +36,9 @@ main
 
 .path ul li:last-child
 {
-    color: #8c8e89b0;
+    color: rgba(140, 142, 137, 0.69);
     gap: .5vw; 
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 7px;
 }
 
