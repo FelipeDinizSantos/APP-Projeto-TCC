@@ -1,0 +1,150 @@
+<%- include('../layouts/header', 
+    {
+        title: 'CO.GUI - Roadmap', 
+        styleLinks: ['/stylesheets/roadmap/main.css'],
+        scriptsLinks: ['/scripts/roadmap/index.js']
+    }) 
+%>
+
+  <main>
+
+    <div class="path">
+      <ul>
+        <li>
+          Tecnologia 
+          <img src="/assets/arrowPath.svg">
+        </li>
+        <li>
+          Front-end
+          <img src="/assets/flagPath.svg">
+        </li>
+      </ul>
+    </div>
+
+    <div class="progress">
+      <div class="myProgress">
+        <h1>
+          <span>Meu</span> 
+          Progresso
+        </h1>
+        <ul>
+          <li>
+            <span><img src="/assets/circlePink.svg">Iniciado</span>
+            <span>4%</span>
+          </li>
+          <li>
+            <span><img src="/assets/circleOrange.svg">Em andamento</span>
+            <span>4%</span>
+          </li>
+          <li>
+            <span><img src="/assets/circleGreen.svg">Finalizado</span>
+            <span>4%</span>
+          </li>
+          <li>
+            <span>Total</span>
+            <span style="margin-right: 0">4</span>
+          </li>
+        </ul>
+      </div>
+      <div class="gadgets">
+        <ul>
+          <li class="favoriteButton"><img src="/assets/unFavoriteContent.svg" class="favoriteIcon">Conteudo favoritos</li>
+          <li><img src="/assets/importantStep.svg">Passo importante</li>
+          <li><img src="/assets/opcionalStep.svg">Passo opcional</li>
+        </ul>
+      </div>
+      <div class="download">
+        <ul>
+          <li>
+            <img src="/assets/shareIcon.svg"> 
+            <p>Compartilhar</p>
+          </li>
+          <li>
+            <img src="/assets/downloadIcon.svg"> 
+            <p>Download</p>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="title">
+        <img src="/assets/titleRoadmapCircle.svg">
+        <h1>Front-end</h1>
+      </div>
+    
+      <div class="gallery-wrapper">
+          <img src="assets/stepFour.svg" class="item" alt="stepFour">
+          <img src="assets/stepTwo.svg" class="item" alt="stepTwo">
+          <img src="assets/stepOne.svg" class="item current-item" alt="stepOne">
+          <img src="assets/stepThree.svg" class="item" alt="stepThree">
+          <img src="assets/stepFive.svg" class="item" alt="stepFive">
+          <img src="assets/arrowRoadmap.svg" alt="arrowRoadmap">
+      </div>
+    </div>
+
+    <div class="descriptionRoadmap">
+      <h1>Fundamentos</h1>
+      <p>Preceitos básicos a seguir:</p>
+    </div>
+
+    <span class="line" style="height: 10.5vh;">
+
+    </span>
+
+    <section class="principalTitle">
+      <h1>Linguagens de Programação</h1>
+    </section>
+
+    <span class="line" style="padding-bottom: 100vh;"></span>
+
+    <div class="contentContainer">
+      <div class="information">
+        <p class="titleInformation">
+          HTML
+        </p>
+
+        <p class="descriptionInformation">
+          <img src="/assets/informationContentCircle.svg">
+          Semântica HTML
+        </p>
+      </div>
+      <span class="line horizontal" style="margin-left: -10.8vw; margin-top: 3vh;"></span>
+    </div>
+
+    <div class="contentContainer inverted" style="margin-top: -1.2vh;">
+      <div class="information">
+        <p class="titleInformation">
+          CSS
+        </p>
+
+        <p class="descriptionInformation">
+          <img src="/assets/informationContentCircle.svg">
+          Semântica HTML
+        </p>
+      </div>
+      <span class="line horizontal" style="margin-left: 11.3vw; margin-top: 3vh;"></span>
+    </div>
+
+    <div class="contentContainer" style="margin-top: -1vh;">
+      <div class="information">
+        <p class="titleInformation">
+          JAVASCRIPT
+        </p>
+
+        <p class="descriptionInformation">
+          <img src="/assets/informationContentCircle.svg">
+          Semântica HTML
+        </p>
+      </div>
+      <span class="line horizontal" style="margin-left: -10.8vw; margin-top: 3vh;"></span>
+    </div>
+
+    <div class="conclude">
+      <img src="/assets/concludedFalse.png" class="false">
+    </div>
+
+  </main>
+</body>
+</html>
