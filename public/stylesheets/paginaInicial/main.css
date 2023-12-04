@@ -16,12 +16,14 @@ main
 
 section.logo img
 {
-    width: 17vw;
+    margin-top: -25vh;
+    height: 83vh;
 }
 
 section.container
 {
     display: flex;
+    margin-top: -25vh;
     gap: 5.5vw;
 }
 

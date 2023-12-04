@@ -33,13 +33,21 @@ document.querySelector('.container').addEventListener('click', (event) => {
                 setRoadmapsContent(["Gestão Ambiental", "Energias Renováveis", "Conservação da Biodiversidade", "Desenvolvimento Sustentável"]);
                 break;
             case 3:
-                setRoadmapsContent(["Nutrição e Alimentação Saudável", "Mindfulness e Bem-Estar Mental", "Fitness e Exercícios Funcionais", "Medicina Preventiva"]);
+                setRoadmapsContent(["Front-end", "Administração de Sistemas", "Segurança da Informação", "Ciências de Dados"]);
                 break;
             default:
                 break;
         }
     }
 });
+
+document.querySelector('.roadmapsContainer').addEventListener('click', (event)=>
+{
+    if(event.target.classList.contains('clickable'))
+    {
+        window.location.href = '/roadmap';
+    }
+})
 
 function setRoadmapsContent(contents) {
     const roadmaps = document.querySelectorAll('.roadmapsContainer p');

@@ -239,6 +239,7 @@ document.querySelector('main').addEventListener('click', (event) =>
 
     if(event.target.classList.contains('titleInformation') || event.target.classList.contains('descriptionInformation'))
     {
+        document.querySelector('body').classList.add('hiddenScroll');
         const contents = document.querySelectorAll('.contentContainer');
         const index = Array.from(contents).indexOf(event.target.parentNode.parentNode);
         currentIndexContent = index; 
@@ -271,6 +272,7 @@ document.querySelector('.lateralMenu').addEventListener('click', (event)=>
 {
     if(event.target.classList.contains('closeLateralMenuBtn'))
     {
+        document.querySelector('body').classList.remove('hiddenScroll');
         let lateralMenu = document.querySelector('.lateralMenu');
         let overlay = document.querySelector('.overlay');
         let main = document.querySelector('main');

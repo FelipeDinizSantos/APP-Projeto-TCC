@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@400;500&display=swap');
 
+body.hiddenScroll
+{
+    overflow: hidden;
+    height: 100vh;
+}
+
 .lateralMenu
 {
     background-color: white;
@@ -186,8 +192,19 @@
 {
     text-align: justify;
     text-indent: 4vw;
+    padding-right: 1vw;
     font-size: 3vh;
     color: #636560;
+    overflow: auto;
+}
+
+.overflowAuto
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 55%;
+    scrollbar-width: thin;
 }
 
 .overlay
@@ -748,6 +765,7 @@ span.horizontal
     font-weight: 600;
     border-radius: .5vw;
     letter-spacing: 3px;
+    margin-top: -.5vh;
     text-align: center;
     color: white;
     background: linear-gradient(90deg, #9B11EF 14.29%, #683DE5 91.52%);

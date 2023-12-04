@@ -20,6 +20,11 @@ home.addEventListener('mouseout', ()=>
     home.firstElementChild.src= "/assets/homeGray.svg";
 })
 
+home.addEventListener('click', ()=>
+{
+    window.location.href = '/';
+})
+
 notification.addEventListener('mouseover', ()=>
 {
     notification.firstElementChild.src = "/assets/notification.png";
