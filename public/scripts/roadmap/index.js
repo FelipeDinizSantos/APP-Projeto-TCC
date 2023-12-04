@@ -1,5 +1,19 @@
 document.querySelector('main').addEventListener('click', (event) => 
 {
+    if(event.target.classList.contains('flag'))
+    {
+        if(event.target.classList.contains('active'))
+        {
+            event.target.src = '/assets/flagPath.svg';
+        }
+        else
+        {
+            event.target.src = '/assets/flagPathActive.svg';
+        }
+
+        event.target.classList.toggle('active');
+    }
+
     if (event.target.classList.contains('item'))
     {
         const items = document.querySelectorAll(".item");
