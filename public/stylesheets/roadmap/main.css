@@ -32,6 +32,7 @@
     font-weight: 500;
     margin-bottom: 5.5vh;
     border-radius: .8vw;
+    z-index: 1;
     border: 1.1px solid #E1E1E1;
 }
 
@@ -105,7 +106,7 @@
 .functionalities .situation .options.show
 {
     display: flex;
-    height: 27vh;
+    height: 25.5vh;
 }
 
 .functionalities .situation .options p 
@@ -114,8 +115,8 @@
     color: #636560;
     font-weight: 400;
     padding: 1vh;
-    gap: .5vw;
     font-size: 2.2vh;
+    align-items: center;
     width: 9.8vw;
     margin-left: .6vw;
     border-radius: .5vw;
@@ -124,7 +125,9 @@
 
 .functionalities .situation .options p img
 {
-    width: 1vw;
+    width: 2vw;
+    height: 2vh;
+    margin-right: .2vw;
 }
 
 .situation .options p:hover 
@@ -183,6 +186,7 @@
 {
     text-align: justify;
     text-indent: 4vw;
+    font-size: 3vh;
     color: #636560;
 }
 
@@ -215,6 +219,7 @@
     display: flex;
     align-items: center;
     gap: 1.5vh;
+    z-index: 10000000;
     cursor: pointer;
 }
 
@@ -404,8 +409,9 @@ main
     gap: .7vw;
 }
 
-.gadgets ul li:first-child
+.gadgets ul li.favoriteButton
 {
+    position: relative;
     padding: 1.8vh 2vh;
     background: linear-gradient(180deg, #ffffff 70%, #e6e6e609);
     box-shadow: 1px 4px 8px 0px #d2d6e4a6;
@@ -413,7 +419,80 @@ main
     cursor: pointer;
 }
 
-.conclude img.true
+.favoritesContainer
+{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15.9vw;
+    margin-top: 9vh;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6.7vh 0 2vh 1vw;
+    z-index: 1000;
+    box-shadow: 1px 4px 8px 0px #d2d6e4a6;
+    border-radius: 1.1vh;
+}
+
+.favoritesContainer .favoriteQtd
+{
+    font-size: .9vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #CBCBCB;
+    font-weight: 400;
+    margin: 2vh 2vh 2vh 3vh;
+}
+
+.favoritesContainer .optionsFavorite ul li:hover
+{
+    background-color: #f4f4f488;
+}
+
+.favoritesContainer ul
+{
+    display: flex;
+    gap: .5vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.favoritesContainer ul li
+{
+    padding: 1vh;
+    border-radius: .5vw;
+    width: 13.7vw;
+}
+
+.favoritesContainer .optionsFavorite img
+{
+    width: .7vw;
+}
+
+.favoritesContainer .optionsFavorite span
+{
+    display: flex;
+    color: #23253A;
+    font-weight: 400;
+    gap: .5vw;
+    font-size: 2.2vh;
+    width: 9.8vw;
+    border-radius: .5vw;
+    cursor: pointer;
+}
+
+.favoriteIcon.true
+{
+    animation: pulse .5s linear;
+}
+
+.conclude img.concludeTrue
 {
     animation: pulse .5s linear;
 }
@@ -736,4 +815,14 @@ span.horizontal
     width: 8.5vw;
     cursor: pointer;
     z-index: 1000;
+}
+
+.contentContainer img[alt='importantStep']
+{
+    position: absolute;
+    left: 0;
+    width: 2vw;
+    z-index: 10000;
+    margin-top: -1.5vh;
+    margin-left: 59.5vh;
 }

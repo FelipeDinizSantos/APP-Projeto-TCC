@@ -31,12 +31,12 @@
 
     <div class="goAndBack">
       <div class="back">
-        <img src="/assets/nextArrow.svg">
-        <p>Voltar para o anterior</p>
+        <img src="/assets/nextArrow.svg" class="back">
+        <p class="back">Voltar para o anterior</p>
       </div>
       <div class="go">
-        <p>Avançar</p>
-        <img src="/assets/nextArrow.svg">
+        <p class="go">Avançar</p>
+        <img src="/assets/nextArrow.svg" class="go">
       </div>
     </div>
   </div>
@@ -67,25 +67,34 @@
         <ul class="notStarted">
           <li>
             <span><img src="/assets/circleNotStarted.svg">Iniciado</span>
-            <span>0%</span>
+            <span class="percentage">0%</span>
           </li>
           <li>
             <span><img src="/assets/circleNotStarted.svg">Em andamento</span>
-            <span>0%</span>
+            <span class="percentage">0%</span>
           </li>
           <li>
             <span><img src="/assets/circleNotStarted.svg">Finalizado</span>
-            <span>0%</span>
+            <span class="percentage">0%</span>
           </li>
           <li>
             <span>Total</span>
-            <span style="margin-right: 0">20</span>
+            <span style="margin-right: 0" class="totalContents">20</span>
           </li>
         </ul>
       </div>
       <div class="gadgets">
         <ul>
-          <li class="favoriteButton"><img src="/assets/unFavoriteContent.svg" class="favoriteIcon">Conteúdos Favoritos</li>
+          <li class="favoriteButton">
+            <img src="/assets/unFavoriteContent.svg" class="favoriteIcon">
+            Conteúdos Favoritos
+            <div class="favoritesContainer">
+              <div class="optionsFavorite">
+                <p class="favoriteQtd">Total: 0</p>
+                <ul></ul>
+              </div>
+            </div>
+          </li>
           <li><img src="/assets/importantStep.svg">Passo importante</li>
           <li><img src="/assets/opcionalStep.svg">Passo opcional</li>
         </ul>
@@ -137,6 +146,7 @@
     <span class="line" style="padding-bottom: 130vh;"></span>
 
     <div class="contentContainer">
+      <img src="/assets/importantStep.svg" alt="importantStep">
       <div class="information"  aria-label="Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use <header>para cabeçalhos, <nav>para menus de navegação e <footer>para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.">
         <p class="titleInformation">
           HTML
@@ -179,7 +189,7 @@
     </div>
 
     <div class="conclude">
-      <img src="/assets/concludedFalse.png" class="false">
+      <img src="/assets/concludedFalse.png" class="concludeFalse">
     </div>
 
   </main>
