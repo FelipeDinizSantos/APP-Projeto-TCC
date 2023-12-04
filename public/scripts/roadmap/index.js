@@ -43,6 +43,8 @@ document.querySelector('main').addEventListener('click', (event) =>
 
     if(event.target.classList.contains('titleInformation') || event.target.classList.contains('descriptionInformation'))
     {
+        const contents = document.querySelectorAll('.contentContainer');
+
         let lateralMenu = document.querySelector('.lateralMenu');
         let overlay = document.querySelector('.overlay');
         let main = document.querySelector('main');
@@ -50,6 +52,15 @@ document.querySelector('main').addEventListener('click', (event) =>
         lateralMenu.classList.add('show');
         overlay.style.display='block';
         main.classList.add('menuActive');
+
+        let contentTitle = event.target.parentNode.querySelector('.descriptionInformation').innerText;
+        let contentText = event.target.parentNode.getAttribute("aria-label");
+
+        let title = document.querySelector('.lateralMenu .themeTitle');
+        let text = document.querySelector('.lateralMenu .themeText');
+
+        text.innerText = contentText;
+        title.innerText = contentTitle;
     }
 });
 
@@ -60,9 +71,23 @@ document.querySelector('.lateralMenu').addEventListener('click', (event)=>
         let lateralMenu = document.querySelector('.lateralMenu');
         let overlay = document.querySelector('.overlay');
         let main = document.querySelector('main');
-
         lateralMenu.classList.remove('show');
         overlay.style.display='none';
         main.classList.remove('menuActive');
+    }
+
+    if (event.target.classList.contains('openOptions')) {
+        const arrowBtn = document.querySelector('.openOptions');
+        const optionContainer = document.querySelector('.situation .options');
+
+        optionContainer.classList.toggle('show');
+        arrowBtn.classList.toggle('invert');
+    }
+
+    if(event.target.classList.contains('option'))
+    {
+        document.querySelector('.situation p:first-child').innerHTML = event.target.innerHTML;
+        const optionContainer = document.querySelector('.situation .options');
+        optionContainer.classList.remove('show');
     }
 })
