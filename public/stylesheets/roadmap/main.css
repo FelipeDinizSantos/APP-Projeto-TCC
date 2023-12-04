@@ -27,18 +27,20 @@
     align-items: center;
     width: fit-content;
     gap: 4vh;
+    margin-top: 1vh;
     font-size: 2.5vh;
     font-weight: 500;
-    margin-bottom: 4.5vh;
+    margin-bottom: 5.5vh;
     border-radius: .8vw;
-    border: 2px solid #E1E1E1;
+    border: 1.1px solid #E1E1E1;
 }
 
 .situation
 {
     position: relative;
     display: flex;
-    padding: .5vh 2.5vw .5vh 0vw;
+    align-items: center;
+    padding: 1vh 3vw 1vh 0vw;
     height: 100%;
     border-top-right-radius: .8vw;
     border-bottom-right-radius: .8vw;
@@ -47,7 +49,7 @@
 
 .situation p
 {
-    margin-left: 1.2vw;
+    margin-left: 1.5vw;
 }
 
 .state
@@ -55,7 +57,7 @@
     display: flex;
     align-items: center;
     gap: .7vw;
-    padding: 0vh 0 0 1.1vw;
+    padding: 0vh 0 0 1.6vw;
 }
 
 .state img
@@ -87,13 +89,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 10vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    margin-right: -9vw;
-    margin-top: 2vh;
+    width: 12vw;
+    margin-top: 7.5vh;
+    margin-right: -.7vw;
+    border: 1.1px solid #E1E1E1;
+    align-items: flex-start;
     justify-content: center;
-    gap: 1.2vh;
+    gap: 2vh;
     height: 0vh;
     z-index: 1000;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.068);
@@ -108,13 +110,19 @@
 
 .functionalities .situation .options p 
 {
-    font-size: 2.3vh;
-    text-align: center;
-    padding: 1vh;
+    display: flex;
+    color: #636560;
+    gap: .5vw;
+    font-size: 2.2vh;
+    width: 9vw;
+    padding: .5vh .5vw;
+    border-radius: .5vw;
     cursor: pointer;
-    gap: .7vw;
-    border-radius: .8vw;
-    cursor: pointer;
+}
+
+.functionalities .situation .options p img
+{
+    width: 1vw;
 }
 
 .situation .options p:hover 
@@ -134,16 +142,46 @@
 
 .themeTitle
 {
+    margin-bottom: 5vh;
+}
+
+.themeTitle span
+{
     color: #23253A;
     font-weight: 700; 
     font-size: 6vh;   
     letter-spacing: 3px;
-    margin-bottom: 2.3vh;
+}
+
+.themeTitle img
+{
+    margin-left: 1vw;
+    width: 2.1vw;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.themeTitle img.favorite.true
+{
+    animation: pulse .5s linear;
 }
 
 .themeText
 {
+    text-align: justify;
     text-indent: 4vw;
+    color: #636560;
 }
 
 .overlay
@@ -156,6 +194,44 @@
     left: 0;
     z-index: 1000000;
     display: none;
+}
+
+.goAndBack
+{
+    display: flex;
+    width: 87%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 7vh;
+    margin-bottom: 7vh;
+}
+
+.goAndBack div
+{
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    cursor: pointer;
+}
+
+.goAndBack div p
+{
+    text-decoration: underline;
+    font-size: 2.2vh;
+    font-weight: 500;
+    color: #23253A;
+}
+
+.goAndBack img
+{
+    width: 1.5vw;
+}
+
+.go img
+{
+    transform: scaleX(-1);
 }
 
 main.menuActive
@@ -324,26 +400,9 @@ main
     cursor: pointer;
 }
 
-.gadgets ul li:first-child img.favorite 
-{
-    animation: pulse .5s linear;
-}
-
 .conclude img.true
 {
     animation: pulse .5s linear;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1); 
-    }
-    50% {
-        transform: scale(1.2); 
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 .gadgets ul li img

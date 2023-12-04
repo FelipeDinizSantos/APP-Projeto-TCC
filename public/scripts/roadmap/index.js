@@ -56,7 +56,7 @@ document.querySelector('main').addEventListener('click', (event) =>
         let contentTitle = event.target.parentNode.querySelector('.descriptionInformation').innerText;
         let contentText = event.target.parentNode.getAttribute("aria-label");
 
-        let title = document.querySelector('.lateralMenu .themeTitle');
+        let title = document.querySelector('.lateralMenu .themeTitle span');
         let text = document.querySelector('.lateralMenu .themeText');
 
         text.innerText = contentText;
@@ -86,8 +86,25 @@ document.querySelector('.lateralMenu').addEventListener('click', (event)=>
 
     if(event.target.classList.contains('option'))
     {
-        document.querySelector('.situation p:first-child').innerHTML = event.target.innerHTML;
+        document.querySelector('.state span').innerText = event.target.innerText;
+        document.querySelector('.state img').src = event.target.querySelector('img').src;
         const optionContainer = document.querySelector('.situation .options');
+        const arrowBtn = document.querySelector('.openOptions');
         optionContainer.classList.remove('show');
+        arrowBtn.classList.toggle('invert');
+    }
+
+    if(event.target.classList.contains('favorite'))
+    {
+        event.target.classList.toggle('true');
+
+        if(event.target.classList.contains('true'))
+        {
+            event.target.src="/assets/favoriteContent.svg"
+        }
+        else
+        {
+            event.target.src="/assets/unFavoriteContent.svg";
+        }
     }
 })

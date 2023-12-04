@@ -12,21 +12,32 @@
     <div class="functionalities">
       <div class="state">
         <img src="/assets/circleNotStarted.svg">
-        Pendente
+        <span>Pendente</span>
       </div>
       <div class="situation">
         <p>Progresso</p>
         <div class="options">
-          <p class="option">Inicio</p>
-          <p class="option">Andamento</p>
-          <p class="option">Finalizado</p>
+          <p class="option"><img src="/assets/circlePink.svg"> Inicio</p>
+          <p class="option"><img src="/assets/circleOrange.svg"> Andamento</p>
+          <p class="option"><img src="/assets/circleGreen.svg"> Finalizado</p>
         </div>
       </div>
       <img src="/assets/arrowCategoryContainer.svg" class="openOptions">
     </div>
 
-    <h1 class="themeTitle">Sêmantica HTML</h1>
-    <p class="themeText">Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use < header >para cabeçalhos, < nav >para menus de navegação e < footer >para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.</p>
+    <div class="themeTitle"><span></span> <img src="/assets/unFavoriteContent.svg" class="favorite"></div>
+    <p class="themeText"></p>
+
+    <div class="goAndBack">
+      <div class="back">
+        <img src="/assets/nextArrow.svg">
+        <p>Voltar para o anterior</p>
+      </div>
+      <div class="go">
+        <p>Avançar</p>
+        <img src="/assets/nextArrow.svg">
+      </div>
+    </div>
   </div>
 
   <div class="overlay"></div>
@@ -125,10 +136,7 @@
     <span class="line" style="padding-bottom: 130vh;"></span>
 
     <div class="contentContainer">
-      <div class="information"  aria-label=
-      "
-      Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use <header>para cabeçalhos, <nav>para menus de navegação e <footer>para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.
-      ">
+      <div class="information"  aria-label="Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use <header>para cabeçalhos, <nav>para menus de navegação e <footer>para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.">
         <p class="titleInformation">
           HTML
         </p>
@@ -142,7 +150,7 @@
     </div>
 
     <div class="contentContainer inverted" style="margin-top: -1.2vh;">
-      <div class="information">
+      <div class="information" aria-label="Flexbox e Grid são técnicas avançadas de layout em CSS. Flexbox é usado para organizar elementos em uma única dimensão (linha ou coluna), enquanto Grid permite um layout bidimensional. Compreender essas ferramentas facilita a criação de designs responsivos e flexíveis.">
         <p class="titleInformation">
           CSS
         </p>
@@ -156,7 +164,7 @@
     </div>
 
     <div class="contentContainer" style="margin-top: -1vh;">
-      <div class="information">
+      <div class="information" aria-label="O DOM (Modelo de Objeto de Documento) representa a estrutura de uma página web. JavaScript é usado para manipular dinamicamente o DOM, respondendo a eventos do usuário, como cliques e movimentos do mouse. Isso é essencial para criar interatividade em aplicações web.">
         <p class="titleInformation">
           JAVASCRIPT
         </p>
