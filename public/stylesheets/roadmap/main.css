@@ -861,3 +861,88 @@ span.horizontal
     margin-top: -1.5vh;
     margin-left: 59.5vh;
 }
+
+.loginRequireContainer
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    background-color: white;
+    width: 45vw;
+    padding: 5.5vh 3vh;
+    border: 1.1px solid #E1E1E1;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5vh;
+    z-index: 1000000;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.068);
+    border-radius: 1.2vw;
+}
+
+.loginRequireContainer.show
+{
+    display: flex;
+}
+
+.loginRequireContainer form
+{
+    display: flex;
+    gap: 1vh;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    margin-left: 2.8vh;
+}
+
+.loginRequireContainer input
+{
+    padding: .5vh;
+}
+
+.loginRequireContainer input, label
+{
+    font-size: 2vh;
+}
+
+.loginRequireContainer h1
+{
+    font-size: 5.5vh;
+    color: #23253A;
+}
+
+.loginRequireContainer button
+{
+    border: none;
+    outline: none;
+    padding: 1vh;
+    font-size: 2.5vh;
+    margin-top: 2vh;
+    width: 10vw;
+    font-weight: 600;
+    border-radius: .5vw;
+    letter-spacing: 3px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #9B11EF 14.29%, #683DE5 91.52%);
+    filter: drop-shadow(0px 4.41px 16.538px #D2D6E4) drop-shadow(-5.513px -5.513px 33.077px #FFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.loginRequireContainer button:hover
+{
+    transform: scale(1.03);
+}
+
+.closeLoginBtn
+{
+    margin: 3vh;
+    width: 1.4vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}

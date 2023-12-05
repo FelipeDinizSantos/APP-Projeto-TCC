@@ -248,11 +248,22 @@ document.querySelector('.progress').addEventListener('click', (event)=>
     }
 })
 
-document.querySelector('.gadgets').addEventListener('click', (event)=>
+document.querySelector('body').addEventListener('click', (event)=>
 {
-    if(event.target.classList.contains('.loginRequire'))
+    if(event.target.classList.contains('loginRequire'))
     {
-        document.querySelector('.loginRequireContainer').classList.toggle('show');
+        let overlay = document.querySelector('.overlay');
+        document.querySelector('body').classList.add('hiddenScroll');
+        overlay.style.display='block';
+        document.querySelector('.loginRequireContainer').classList.add('show');
+    }
+
+    if(event.target.classList.contains('closeLoginBtn'))
+    {
+        let overlay = document.querySelector('.overlay');
+        document.querySelector('body').classList.remove('hiddenScroll')
+        overlay.style.display='none';
+        document.querySelector('.loginRequireContainer').classList.remove('show');
     }
 })
 
