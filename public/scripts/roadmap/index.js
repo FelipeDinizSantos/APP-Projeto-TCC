@@ -153,21 +153,15 @@ function updateProgress()
             let li = document.createElement('li');
             let img = document.createElement('img');
             let span = document.createElement('span');
-            let span1 = document.createElement('span');
-            let path = contents[props].querySelector('.titleInformation').innerText + '  > ';
-            let path1 = contents[props].querySelector('.descriptionInformation').innerText;
-
+            let path = contents[props].querySelector('.titleInformation').innerText + ' > ' + contents[props].querySelector('.descriptionInformation').innerText;
+            
             span.innerText = path;
-            span1.innerText = path1;
-            span1.classList.add('favoriteColor');
-
             img.src = '/assets/circleNotStarted.svg';
             li.classList.add('optionFavorite');
             img.classList.add('favoriteImageList');
             span.classList.add('favoriteTextList');
             li.appendChild(img);
             li.appendChild(span);
-            li.appendChild(span1);
     
             li.setAttribute('aria-label', props);
     
