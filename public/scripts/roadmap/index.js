@@ -231,13 +231,28 @@ function setFavorite(index)
 
 document.querySelector('.progress').addEventListener('click', (event)=>
 {
-    if(event.target.classList.contains('optionFavorite') || event.target.classList.contains('favoriteImageList') || event.target.classList.contains('favoriteTextList'));
+    if(event.target.classList.contains('optionsFavorite') || event.target.classList.contains('favoriteImageList') || event.target.classList.contains('favoriteTextList'));
     {
-        let indexContent = parseInt(event.target.getAttribute("aria-label"));
-        if(!indexContent) indexContent = parseInt(event.target.parentNode.getAttribute("aria-label"));
-        const contents = document.querySelectorAll('.contentContainer');
+        var ulElement = document.querySelector('.optionsFavorite ul');
+
+        if (ulElement.children.length > 0) 
+        {
+            let indexContent = parseInt(event.target.getAttribute("aria-label"));
         
-        contents[indexContent].querySelector('.titleInformation').click();
+            if(!indexContent) indexContent = parseInt(event.target.parentNode.getAttribute("aria-label"));
+            const contents = document.querySelectorAll('.contentContainer');
+            
+            const content =  contents[indexContent].querySelector('.titleInformation');
+            content.click();
+        }
+    }
+})
+
+document.querySelector('.gadgets').addEventListener('click', (event)=>
+{
+    if(event.target.classList.contains('.loginRequire'))
+    {
+        document.querySelector('.loginRequireContainer').classList.toggle('show');
     }
 })
 

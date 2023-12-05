@@ -231,15 +231,17 @@ function setFavorite(index)
 
 document.querySelector('.progress').addEventListener('click', (event)=>
 {
-    if(event.target.classList.contains('optionFavorite') || event.target.classList.contains('favoriteImageList') || event.target.classList.contains('favoriteTextList'));
+    if(event.target.classList.contains('optionsFavorite') || event.target.classList.contains('favoriteImageList') || event.target.classList.contains('favoriteTextList'));
     {
         let indexContent = parseInt(event.target.getAttribute("aria-label"));
+        
         if(!indexContent) indexContent = parseInt(event.target.parentNode.getAttribute("aria-label"));
         const contents = document.querySelectorAll('.contentContainer');
         
         contents[indexContent].querySelector('.titleInformation').click();
     }
 })
+
 
 function updateRoadmap(step)
 {
