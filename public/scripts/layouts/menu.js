@@ -2,6 +2,19 @@ const burgerButton = document.querySelector('.burgerButton');
 const menu = document.getElementsByTagName('header')[0];
 const menuList = document.querySelector('.menuOptions');
 
+const allOptions = document.querySelectorAll('.menuOptions li');
+
+allOptions.forEach(opt => 
+{
+    if(!opt.classList.contains('home'))
+    {
+        opt.addEventListener('click', ()=>
+        {
+            alert('Em contrução!');
+        })
+    }  
+})
+
 const home = document.querySelector('.home'),
 notification = document.querySelector('.notification'),
 community = document.querySelector('.community'),
