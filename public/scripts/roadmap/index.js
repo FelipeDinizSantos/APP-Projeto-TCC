@@ -5,6 +5,75 @@ let savedInformation =
     progress: {}
 };
 
+let contentsInformations = 
+{
+    stepOne:
+    {
+        principalTitle: 'Fundamentos',
+        generalTitle: 'Linguagens de Marcação, Programação e Estilo',
+        contentsTitles: ['HTML', 'CSS', 'JAVASCRIPT'],
+        descriptions: ['Semântica HTML', 'Flexbox e Grid', 'Manipulação do DOM com JavaScript'],
+        texts: 
+        [
+            'Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use <header>para cabeçalhos, <nav>para menus de navegação e <footer>para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.',
+            'Flexbox e Grid são técnicas avançadas de layout em CSS. Flexbox é usado para organizar elementos em uma única dimensão (linha ou coluna), enquanto Grid permite um layout bidimensional. Compreender essas ferramentas facilita a criação de designs responsivos e flexíveis.',
+            'O DOM (Modelo de Objeto de Documento) representa a estrutura de uma página web. JavaScript é usado para manipular dinamicamente o DOM, respondendo a eventos do usuário, como cliques e movimentos do mouse. Isso é essencial para criar interatividade em aplicações web.'
+        ]
+    },
+    stepTwo:
+    {
+        principalTitle: 'Avançando em Javascript',
+        generalTitle: 'Escolha do Framework Front-end',
+        contentsTitles: ['React, Angular e Vue.js', 'Bibliotecas Facilitadoras', 'Otimização com Bibliotecas'],
+        descriptions: ['Frameworks', 'Bibliotecas', 'Complementos'],
+        texts:
+        [
+            'Frameworks como React, Angular e Vue.js simplificam o desenvolvimento front-end ao oferecer estruturas organizadas e reutilizáveis. React é fechado pelo Facebook, Angular pelo Google, e Vue.js é uma opção mais leve. Escolha o que melhor se alinha com suas preferências e necessidades do projeto.',
+            'Além dos frameworks, bibliotecas como React Router (para navegação em aplicações React) e Vuex (gerenciamento de estado para Vue.js) podem ser incorporadas para otimizar tarefas comuns, economizando tempo e melhorando a manutenibilidade do código.',
+            'Além dos frameworks, incorporar bibliotecas como React Router (para navegação em aplicações React) e Vuex (gerenciamento de estado para Vue.js) pode otimizar tarefas comuns, economizando tempo e aprimorando a manutenibilidade do código.'
+        ]
+    },
+    stepThree:
+    {
+        principalTitle: 'Automatizando o Desenvolvimento',
+        generalTitle: 'Ferramentas de Automação',
+        contentsTitles: ['Webpack', 'Babel', 'Git'],
+        descriptions: ['Automatização e Otimização de Recursos Web', 'Transpilador de Javascript', 'Versionador de Arquivos'],
+        texts:
+        [
+            'Webpack é uma ferramenta de automação que empacota e otimiza recursos web, gerenciando dependências, agrupando arquivos e melhorando o desempenho da aplicação. Facilita o desenvolvimento ao proporcionar uma experiência eficiente.',
+            'Babel, por sua vez, realiza a transpilação de código moderno para uma versão compatível com navegadores mais antigos. Isso permite utilizar as últimas funcionalidades do ECMAScript sem se preocupar com a compatibilidade, contribuindo para a manutenção da base de código.',
+            'Git é um sistema de controle de versão crucial para rastrear alterações no código, tornando o trabalho colaborativo mais eficiente. Possui recursos de ramificação que facilitam o desenvolvimento paralelo e a gestão de versões, sendo essencial para projetos com múltiplos colaboradores.'
+        ]
+    },
+    stepFour:
+    {
+        principalTitle: 'Colocando a Mão na Massa!',
+        generalTitle: 'Projeto Prático',
+        contentsTitles: ['Desenvolvimento Real', 'Contribuição em Projetos de Código Aberto', 'Aprendizado Colaborativo'],
+        descriptions: ['Consolidação e Desafios', 'Experiência Prática', 'Desenvolvimento no Mundo Real'],
+        texts:
+        [
+            'Aplicar os conhecimentos em projetos reais é crucial. Isso não apenas consolida uma compreensão teórica, mas também expõe os desafios do mundo real.',
+            'Contribuir para projetos de código aberto no GitHub é uma maneira excelente de ganhar experiência prática e colaborar com outros desenvolvedores.',
+            'Engajar-se em projetos reais e participar de comunidades de código aberto proporciona uma perspectiva valiosa, permitindo aprendizado colaborativo e aprimoramento contínuo das habilidades de desenvolvimento.'
+        ]
+    },
+    stepFive:
+    {
+        principalTitle: 'Aprofundamento',
+        generalTitle: 'Desenvolvimento Front-End Avançado',
+        contentsTitles: ['Exploração Avançada', 'Participação em Comunidades Especializadas', 'Atualização Contínua'],
+        descriptions: ['Tendências e Inovações Front-end', 'Acesso às Últimas Novidades', 'O Caminho para a Excelência'],
+        texts:
+        [
+            'Manter-se atualizado com as tendências do front-end é essencial para qualquer desenvolvedor. Conceitos avançados, como Server-Side Rendering (SSR), são fundamentais para otimizar o desempenho das aplicações. Além disso, Progressive Web Apps (PWAs) oferecem uma experiência de usuário semelhante à de aplicativos nativos.',
+            'Acompanhar as últimas novidades do front-end pode ser realizado participando de conferências, webinars e blogs especializados. Essa interação em comunidades especializadas proporciona uma compreensão mais profunda e prática das inovações no desenvolvimento web.',
+            'Manter uma postura de aprendizado contínuo é crucial. A participação ativa em eventos e a exploração de conceitos avançados garantem que os desenvolvedores estejam sempre à frente, preparados para enfrentar os desafios dinâmicos do desenvolvimento front-end.'
+        ]
+    }
+}
+
 window.addEventListener('load', ()=>
 {
     document.querySelector('.totalContents').innerText = document.querySelectorAll('.contentContainer').length;
@@ -51,20 +120,16 @@ function updateProgress()
             element.parentNode.querySelector('span img').src = '/assets/circleNotStarted.svg';
         }
     }
-
-    started = ((started / contents.length) * 100).toFixed(0);
     altereProgress(started, situations[0], '/assets/circlePink.svg');    
-    situations[0].innerHTML = started + '%';
+    situations[0].innerHTML = started;
 
-    inProgress = ((inProgress / contents.length) * 100).toFixed(0);
     altereProgress(inProgress, situations[1], '/assets/circleOrange.svg');    
-    situations[1].innerHTML = inProgress + '%';
+    situations[1].innerHTML = inProgress;
 
-    finished = ((finished / contents.length) * 100).toFixed(0);
+
     altereProgress(finished, situations[2], '/assets/circleGreen.svg');    
-    situations[2].innerHTML = finished + '%';
+    situations[2].innerHTML = finished;
 
-    const favoriteContainer = document.querySelector('.favoritesContainer');
     const totalBox = document.querySelector('.favoriteQtd');
     let total = 0;
 
@@ -72,7 +137,7 @@ function updateProgress()
     {
         if(savedInformation.favorite[props] === true)
         {
-            total++
+            total++;
         }
     }
 
@@ -88,15 +153,21 @@ function updateProgress()
             let li = document.createElement('li');
             let img = document.createElement('img');
             let span = document.createElement('span');
-            let path = contents[props].querySelector('.titleInformation').innerText + ' > ' + contents[props].querySelector('.descriptionInformation').innerText;
-            
+            let span1 = document.createElement('span');
+            let path = contents[props].querySelector('.titleInformation').innerText + '  > ';
+            let path1 = contents[props].querySelector('.descriptionInformation').innerText;
+
             span.innerText = path;
+            span1.innerText = path1;
+            span1.classList.add('favoriteColor');
+
             img.src = '/assets/circleNotStarted.svg';
             li.classList.add('optionFavorite');
             img.classList.add('favoriteImageList');
             span.classList.add('favoriteTextList');
             li.appendChild(img);
             li.appendChild(span);
+            li.appendChild(span1);
     
             li.setAttribute('aria-label', props);
     
@@ -176,18 +247,132 @@ document.querySelector('.progress').addEventListener('click', (event)=>
     }
 })
 
+function updateRoadmap(step)
+{
+    let principalTitle = contentsInformations[step].principalTitle;
+    let generalTitle = contentsInformations[step].generalTitle;
+    let contentsTitles = contentsInformations[step].contentsTitles;
+    let descriptions = contentsInformations[step].descriptions;
+    let texts = contentsInformations[step].texts;
+
+    document.querySelector('.descriptionRoadmap h1').innerText = principalTitle;
+    document.querySelector('.principalTitle h1').innerText = generalTitle;
+
+    document.querySelectorAll('.contentContainer').forEach((content, index) => 
+    {
+        content.querySelector('.titleInformation').innerText = contentsTitles[index];
+        content.querySelector('.descriptionInformation span').innerText = descriptions[index];
+        content.querySelector('.information').setAttribute('aria-label', texts[index]);
+    })
+}
+
 document.querySelector('main').addEventListener('click', (event) => 
 {
+    if(event.target.classList.contains('stepTwo'))
+    {
+        document.querySelector('img[alt="importantStep"]').style.marginTop=-3+'vh';
+        document.querySelectorAll('.line')[1].style.paddingBottom=135+'vh';
+        document.querySelectorAll('.titleInformation').forEach((title, index) =>
+        {
+            if(index == 1)
+            {
+                title.style.marginTop=-2.2+'vh'
+            }
+            else
+            {
+                title.style.marginTop=-2.5+'vh'
+            }
+        });
+        updateRoadmap('stepTwo')
+    }
+
+    if(event.target.classList.contains('stepOne'))
+    {
+        document.querySelector('img[alt="importantStep"]').style.marginTop=-1.5+'vh';
+        document.querySelectorAll('.line')[1].style.paddingBottom=130+'vh';
+        updateRoadmap('stepOne')
+        document.querySelectorAll('.titleInformation').forEach((title, index) =>
+        {
+            if(index == 1)
+            {
+                title.style.marginTop=-.5+'vh'
+            }
+            else
+            {
+                title.style.marginTop=-1+'vh'
+            }
+        });        
+    }
+
+    if(event.target.classList.contains('stepThree'))
+    {
+        document.querySelector('img[alt="importantStep"]').style.marginTop=-1.5+'vh';
+        document.querySelectorAll('.titleInformation').forEach((title, index) =>
+        {
+            title.style.marginTop=-.6+'vh'
+        });
+        document.querySelectorAll('.line')[1].style.paddingBottom=140+'vh';
+        updateRoadmap('stepThree')
+    }
+
+    if(event.target.classList.contains('stepFour'))
+    {
+        document.querySelector('img[alt="importantStep"]').style.marginTop=-3.5+'vh';
+        document.querySelectorAll('.line')[1].style.paddingBottom=150+'vh';
+        document.querySelectorAll('.titleInformation').forEach((title, index) =>
+        {
+            if(index == 1)
+            {
+                title.style.marginTop=-4+'vh'
+            }
+            else
+            {
+                title.style.marginTop=-2.2+'vh'
+            }
+        });
+        updateRoadmap('stepFour')
+    }
+    
+    if(event.target.classList.contains('stepFive'))
+    {
+        document.querySelector('img[alt="importantStep"]').style.marginTop=-3+'vh';
+        document.querySelectorAll('.line')[1].style.paddingBottom=160+'vh';
+        document.querySelectorAll('.titleInformation').forEach((title, index) =>
+            {
+                if(index == 1)
+                {
+                    title.style.marginTop=-5+'vh'
+                }
+                else
+                {
+                    title.style.marginTop=-2.5+'vh'
+                }
+            });
+        updateRoadmap('stepFive')
+    }
+
     if(event.target.classList.contains('favoriteButton') || event.target.classList.contains('favoriteIcon'))
     {
         let button = document.querySelector('.favoriteIcon');
+        let total = 0;
+
+        for(props in savedInformation.favorite)
+        {
+            if(savedInformation.favorite[props] === true)
+            {
+                total++;
+            }
+        }
 
         button.classList.toggle('true');
 
         if(button.classList.contains('true'))
         {
             document.querySelector('.favoritesContainer').style.display = 'flex';
-            button.src = '/assets/favoriteContent.svg';
+            if(total > 0)
+            {
+                button.src = '/assets/favoriteContent.svg';
+            }
         }
         else
         {
@@ -237,34 +422,66 @@ document.querySelector('main').addEventListener('click', (event) =>
         }
     }
 
-    if(event.target.classList.contains('titleInformation') || event.target.classList.contains('descriptionInformation'))
+    if(event.target.classList.contains('titleInformation') || event.target.classList.contains('descriptionInformation') || event.target.classList.contains('spanDescription'))
     {
-        document.querySelector('body').classList.add('hiddenScroll');
-        const contents = document.querySelectorAll('.contentContainer');
-        const index = Array.from(contents).indexOf(event.target.parentNode.parentNode);
-        currentIndexContent = index; 
-       
-        setProgress(currentIndexContent);
-        setFavorite(currentIndexContent);
+        if(event.target.classList.contains('spanDescription'))
+        {
+            document.querySelector('body').classList.add('hiddenScroll');
+            const contents = document.querySelectorAll('.contentContainer');
+            const index = Array.from(contents).indexOf(event.target.parentNode.parentNode.parentNode);
+            currentIndexContent = index; 
+        
+            setProgress(currentIndexContent);
+            setFavorite(currentIndexContent);
 
-        let lateralMenu = document.querySelector('.lateralMenu');
-        let overlay = document.querySelector('.overlay');
-        let main = document.querySelector('main');
+            let lateralMenu = document.querySelector('.lateralMenu');
+            let overlay = document.querySelector('.overlay');
+            let main = document.querySelector('main');
 
-        clickedContent = event.target.parentNode;
+            clickedContent = event.target.parentNode.parentNode.parentNode;
 
-        lateralMenu.classList.add('show');
-        overlay.style.display='block';
-        main.classList.add('menuActive');
+            lateralMenu.classList.add('show');
+            overlay.style.display='block';
+            main.classList.add('menuActive');
 
-        let contentTitle = event.target.parentNode.querySelector('.descriptionInformation').innerText;
-        let contentText = event.target.parentNode.getAttribute("aria-label");
+            let contentTitle = event.target.parentNode.parentNode.parentNode.querySelector('.descriptionInformation').innerText;
+            let contentText = event.target.parentNode.parentNode.getAttribute("aria-label");
 
-        let title = document.querySelector('.lateralMenu .themeTitle span');
-        let text = document.querySelector('.lateralMenu .themeText');
+            let title = document.querySelector('.lateralMenu .themeTitle span');
+            let text = document.querySelector('.lateralMenu .themeText');
 
-        text.innerText = contentText;
-        title.innerText = contentTitle;
+            text.innerText = contentText;
+            title.innerText = contentTitle;
+        }
+        else
+        {
+            document.querySelector('body').classList.add('hiddenScroll');
+            const contents = document.querySelectorAll('.contentContainer');
+            const index = Array.from(contents).indexOf(event.target.parentNode.parentNode);
+            currentIndexContent = index; 
+        
+            setProgress(currentIndexContent);
+            setFavorite(currentIndexContent);
+
+            let lateralMenu = document.querySelector('.lateralMenu');
+            let overlay = document.querySelector('.overlay');
+            let main = document.querySelector('main');
+
+            clickedContent = event.target.parentNode;
+
+            lateralMenu.classList.add('show');
+            overlay.style.display='block';
+            main.classList.add('menuActive');
+
+            let contentTitle = event.target.parentNode.querySelector('.descriptionInformation').innerText;
+            let contentText = event.target.parentNode.getAttribute("aria-label");
+
+            let title = document.querySelector('.lateralMenu .themeTitle span');
+            let text = document.querySelector('.lateralMenu .themeText');
+
+            text.innerText = contentText;
+            title.innerText = contentTitle;
+        }
     }
 });
 

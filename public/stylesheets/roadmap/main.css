@@ -482,9 +482,23 @@ main
 
 .favoritesContainer ul li
 {
+    display: flex;
     padding: 1vh;
     border-radius: .5vw;
+    font-weight: 400;
     width: 13.7vw;
+}
+
+.favoritesContainer ul li span.favoriteTextList
+{
+    color: #636560;
+}
+
+.favoritesContainer ul li span.favoriteColor
+{
+    color: #23253A;
+    margin-left: -2vw;
+    width: 100%;
 }
 
 .favoritesContainer .optionsFavorite img
@@ -718,7 +732,6 @@ span.line
     transform: translate(-50%);
     margin-left: 0.3vw;
     content: "";
-    height: 10vh;
     width: .3vw;
     z-index: 1000;
     background: linear-gradient(180deg, #A036F4 36.94%, #5200FF 67.9%);
@@ -765,7 +778,6 @@ span.horizontal
     font-weight: 600;
     border-radius: .5vw;
     letter-spacing: 3px;
-    margin-top: -.5vh;
     text-align: center;
     color: white;
     background: linear-gradient(90deg, #9B11EF 14.29%, #683DE5 91.52%);
@@ -783,13 +795,18 @@ span.horizontal
     gap: 1vw;
     font-size: 2.7vh;
     width: 26vw;
-    height: 10.5vh;
-    padding: 2vh;
+    padding: 2vh 1vw 2vh 1vw;
     border-radius: .5vw;
     box-shadow: 0px 2px 0px 1px rgba(186, 186, 186, 0.301);
     color: #636560;
     letter-spacing: 1.5px;
     cursor: pointer;
+}
+
+.contentContainer .information .descriptionInformation span
+{
+    width: 17vw;
+    z-index: 1000000;
 }
 
 .contentContainer .information .descriptionInformation img
