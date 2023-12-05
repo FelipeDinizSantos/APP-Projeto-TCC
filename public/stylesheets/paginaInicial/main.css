@@ -17,13 +17,13 @@ main
 section.logo img
 {
     margin-top: -25vh;
-    height: 83vh;
+    height: 87vh;
 }
 
 section.container
 {
     display: flex;
-    margin-top: -25vh;
+    margin-top: -27vh;
     gap: 5.5vw;
 }
 
