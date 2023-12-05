@@ -580,4 +580,3 @@ document.querySelector('.lateralMenu').addEventListener('click', (event)=>
         }
     }
 })
-

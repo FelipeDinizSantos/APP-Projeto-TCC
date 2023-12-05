@@ -1,0 +1,57 @@
+input
+{
+    border: .2vh solid black;
+    padding: 2vh 2vw;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.title h1 input
+{
+    font-size: 2.5vh;
+    color: #636560;
+}
+
+.titleInformation input
+{
+    color: white;
+    padding: 1vh .5vw;
+}
+
+.titleInformation input::placeholder
+{
+    color: white;
+}
+
+.createContainer
+{
+    margin-top: 27vh;
+    z-index: 10000;
+    margin-bottom: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.createContainer p
+{
+    margin-left: .8vw;
+    width: 15vw;
+    padding: 2vh;
+    font-size: 2.4vh;
+    font-weight: 600;
+    border-radius: .5vw;
+    letter-spacing: 3px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #9B11EF 14.29%, #683DE5 91.52%);
+    filter: drop-shadow(0px 4.41px 16.538px #D2D6E4) drop-shadow(-5.513px -5.513px 33.077px #FFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.createContainer p:hover
+{
+    transform: scale(1.05);
+}

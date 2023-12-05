@@ -6,6 +6,8 @@ const indexRouter = require('./app/routes/index.js');
 const searchRouter = require('./app/routes/search.js');
 const categoriesRouter = require('./app/routes/categories.js');
 const roadmapRouter = require('./app/routes/roadmap.js');
+const otherRoadmap = require('./app/routes/otherRoadmap.js');
+const createRouter = require('./app/routes/createRouter.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -18,6 +20,8 @@ app.use('', indexRouter);
 app.use('/pesquisa', searchRouter);
 app.use('/categorias', categoriesRouter)
 app.use('/roadmap', roadmapRouter)
+app.use('/roadmap-educacao-financeira', otherRoadmap)
+app.use('/criar', createRouter);
 
 app.listen(process.env.PORT ? Number(process.env.PORT) : 3000, ()=>
 {

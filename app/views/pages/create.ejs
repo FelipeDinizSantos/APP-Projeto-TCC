@@ -1,8 +1,8 @@
 <%- include('../layouts/header', 
     {
         title: 'CO.GUI - Roadmap', 
-        styleLinks: ['/stylesheets/roadmap/main.css'],
-        scriptsLinks: ['/scripts/roadmap/index.js']
+        styleLinks: ['/stylesheets/roadmap/main.css', '/stylesheets/create/main.css'],
+        scriptsLinks: ['/scripts/create/index.js']
     }) 
 %>
 
@@ -47,79 +47,12 @@
 
   <main>
 
-    <div class="path">
-      <ul>
-        <li>
-          Tecnologia 
-          <img src="/assets/arrowPath.svg">
-        </li>
-        <li>
-          Front-end
-          <img src="/assets/flagPath.svg" class="flag">
-        </li>
-      </ul>
-    </div>
-
-    <div class="progress">
-      <div class="myProgress">
-        <h1>
-          <span>Meu</span> 
-          Progresso
-        </h1>
-        <ul class="notStarted">
-          <li>
-            <span><img src="/assets/circleNotStarted.svg">Iniciado</span>
-            <span class="percentage">0</span>
-          </li>
-          <li>
-            <span><img src="/assets/circleNotStarted.svg">Em andamento</span>
-            <span class="percentage">0</span>
-          </li>
-          <li>
-            <span><img src="/assets/circleNotStarted.svg">Finalizado</span>
-            <span class="percentage">0</span>
-          </li>
-          <li>
-            <span>Total</span>
-            <span style="margin-right: 0" class="totalContents">20</span>
-          </li>
-        </ul>
-      </div>
-      <div class="gadgets">
-        <ul>
-          <li class="favoriteButton">
-            <img src="/assets/unFavoriteContent.svg" class="favoriteIcon">
-            Conteúdos Favoritos
-            <div class="favoritesContainer">
-              <div class="optionsFavorite">
-                <p class="favoriteQtd">Total: 0</p>
-                <ul></ul>
-              </div>
-            </div>
-          </li>
-          <li><img src="/assets/importantStep.svg">Passo importante</li>
-          <li><img src="/assets/opcionalStep.svg">Passo opcional</li>
-        </ul>
-      </div>
-      <div class="download">
-        <ul>
-          <li>
-            <img src="/assets/shareIcon.svg"> 
-            <p>Compartilhar</p>
-          </li>
-          <li> 
-            <img src="/assets/downloadIcon.svg"> 
-            <p>Download</p>
-          </li>
-        </ul>
-        
-      </div>
-    </div>
-
     <div class="container">
       <div class="title">
         <img src="/assets/titleRoadmapCircle.svg">
-        <h1>Front-end</h1>
+        <h1>
+            <input type="text" placeholder="Título">
+        </h1>
       </div>
     
       <div class="gallery-wrapper">
@@ -133,7 +66,9 @@
     </div>
 
     <div class="descriptionRoadmap">
-      <h1>Fundamentos</h1>
+      <h1>
+        <input type="text" placeholder="Título do Passo">
+      </h1>
       <p>Preceitos básicos a seguir:</p>
     </div>
 
@@ -142,7 +77,9 @@
     </span>
 
     <section class="principalTitle">
-      <h1>Linguagens de Marcação, Programação e Estilo</h1>
+      <h1>
+        <input type="text" placeholder="Descrição">
+      </h1>
     </section>
 
     <span class="line" style="padding-bottom: 130vh;"></span>
@@ -151,12 +88,14 @@
       <img src="/assets/importantStep.svg" alt="importantStep">
       <div class="information"  aria-label="Entender a semântica HTML significa utilizar as tags mencionadas para representar corretamente o conteúdo. Por exemplo, use <header>para cabeçalhos, <nav>para menus de navegação e <footer>para rodapés. Isso não só melhora a acessibilidade, mas também facilita a interpretação dos motores de busca.">
         <p class="titleInformation" style="margin-top: -1vh;">
-          HTML
+            <input type="text" placeholder="Conteúdo">
         </p>
 
         <p class="descriptionInformation" style="font-size: 3vh;">
           <img src="/assets/informationContentCircle.svg">
-          <span class="spanDescription">Semântica HTML</span>
+          <span class="spanDescription">
+            <input type="text" placeholder="Descrição">
+          </span>
         </p>
       </div>
       <span class="line horizontal" style="margin-left: -10.8vw; margin-top: 3vh;"></span>
@@ -165,12 +104,14 @@
     <div class="contentContainer inverted" style="margin-top: -1.2vh; font-size: 2.9vh;">
       <div class="information" aria-label="Flexbox e Grid são técnicas avançadas de layout em CSS. Flexbox é usado para organizar elementos em uma única dimensão (linha ou coluna), enquanto Grid permite um layout bidimensional. Compreender essas ferramentas facilita a criação de designs responsivos e flexíveis.">
         <p class="titleInformation" style="margin-top: -.5vh;">
-          CSS
+            <input type="text" placeholder="Conteúdo">
         </p>
 
         <p class="descriptionInformation" style="font-size: 3vh;">
           <img src="/assets/informationContentCircle.svg">
-          <span class="spanDescription">Flexbox e Grid</span>
+          <span class="spanDescription">
+            <input type="text" placeholder="Descrição">
+          </span>
         </p>
       </div>
       <span class="line horizontal" style="margin-left: 11.3vw; margin-top: 3vh;"></span>
@@ -179,19 +120,21 @@
     <div class="contentContainer" style="margin-top: -1vh;">
       <div class="information" aria-label="O DOM (Modelo de Objeto de Documento) representa a estrutura de uma página web. JavaScript é usado para manipular dinamicamente o DOM, respondendo a eventos do usuário, como cliques e movimentos do mouse. Isso é essencial para criar interatividade em aplicações web.">
         <p class="titleInformation" style="margin-top: -1vh;">
-          JAVASCRIPT
+            <input type="text" placeholder="Conteúdo">
         </p>
 
         <p class="descriptionInformation">
           <img src="/assets/informationContentCircle.svg">
-          <span class="spanDescription">Manipulação do DOM com JavaScript</span>
+          <span class="spanDescription">
+            <input type="text" placeholder="Descrição">
+          </span>
         </p>
       </div>
       <span class="line horizontal" style="margin-left: -10.8vw; margin-top: 3vh;"></span>
     </div>
 
-    <div class="conclude">
-      <img src="/assets/concludedFalse.png" class="concludeFalse">
+    <div class="createContainer">
+        <p>CRIAR</p>
     </div>
 
   </main>

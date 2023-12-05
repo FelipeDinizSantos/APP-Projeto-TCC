@@ -68,6 +68,8 @@ searchBtn.addEventListener('click', ()=>
     {
         if(tag.classList.contains('checked')) tag.classList.remove('checked');
     })
+
+    window.location.href="/roadmap-educacao-financeira";
 })
 
 tags.forEach(tag=>
