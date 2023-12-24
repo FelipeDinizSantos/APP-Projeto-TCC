@@ -1,6 +1,6 @@
 # Hub de Roteiros Multidisciplinares
 
-O Hub de Roteiros Multidisciplinares é uma plataforma inovadora que busca preencher lacunas no mercado educacional, indo além da Tecnologia da Informação. Inspirado pelo roadmap.sh, o projeto visa criar uma comunidade ativa e inclusiva em português, democratizando o acesso ao aprendizado e promovendo a colaboração entre usuários de diversas áreas.
+O Hub de Roteiros Multidisciplinares é uma plataforma inovadora que busca preencher lacunas no mercado educacional, indo além da Tecnologia da Informação. Inspirado pelo [roadmap.sh}(https://roadmap.sh/), o projeto visa criar uma comunidade ativa e inclusiva em português, democratizando o acesso ao aprendizado e promovendo a colaboração entre usuários de diversas áreas.
 
 ## Tecnologias Utilizadas
 
