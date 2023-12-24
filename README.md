@@ -24,5 +24,8 @@ O Hub de Roteiros Multidisciplinares é uma plataforma inovadora que busca preen
 4. Faça push para a branch: `git push origin nome-da-sua-feature`.
 5. Abra um Pull Request.
 
+## Estado Atual do Projeto: *Em Desenvolvimento* 
+Embora não totalmente finalizado, o projeto já demonstra solidez e adaptabilidade, atendendo às demandas educacionais. O trabalho está em constante evolução, e sua contribuição é bem-vinda.
+
 Para mais informações, consulte a documentação: 
 [DOCUMENTAÇÃO](https://drive.google.com/drive/folders/1ELhRyaDLqcnGSfIkUsLBzVuFaW6NpUDT?usp=sharing)
